@@ -1,4 +1,5 @@
-from typing import Dict, List
+from pathlib import Path
+from typing import Dict, List, Union
 
 from langchain_ollama import ChatOllama
 from langchain.tools import tool, BaseTool
@@ -9,21 +10,73 @@ from langchain.messages import (
     AIMessage
 )
 
-# Controlled system prompt
-SYSTEM_PROMPT = SystemMessage(
-    'You are a helpful assistant. Use tools when necessary, '
-    'provide factual accurate responses, and keep response '
-    'length under 100 words whenever possible.'
+from scripts.document_database_build import DocumentVectorStore
+
+
+# Controlled system prompt, though does require
+# slight modification depending on configuration
+def build_system_message(use_tools: bool = False, use_rag: bool = False) -> SystemMessage:
+    prompt = (
+        'You are a helpful assistant. '
+        'provide factual accurate responses, and keep response '
+        'length under 100 words whenever possible.'
+    )
+    if use_tools:
+        prompt += ' Use tools as required.'
+    if use_rag:
+        prompt += (' Additionally use the '
+            'crystal rock group documentation '
+            'search tool if required.')
+    return SystemMessage(prompt)
+
+# RAG data, only use if allowed
+
+RAG_DOCUMENT_VECTOR_STORE = DocumentVectorStore(
+    Path('./documents/CRG_Documentation.md'),
+    Path('./chroma_db'),
+    'crystal_rock_docs'
 )
+
+# RAG search tool
+
+@tool
+def search_crystal_rock_group_documentation(query: str) -> str:
+    """Search the documentation for crystal
+    rock group for a specific query. Returns
+    search results in the form of additional
+    context."""
+    results = RAG_DOCUMENT_VECTOR_STORE.similarity_search(query)
+    return '\n\n'.join(
+        doc.page_content for doc in results
+    )
 
 # Tools to use if allowed
 
 @tool
-def get_weather(city: str) -> str:
-    """Get weather for a given city."""
-    return f"Weather in {city}: Sunny, 21c"
+def get_date_time() -> str:
+    """Get current date and time information.
+    Returns the location, date, time, and timezone."""
+    return '\n'.join([
+        f'Location: Sydney Australia',
+        'Date: 14 March 2026',
+        'Time: 15:30 AEDT (UTC+11)'
+    ])
 
-PROVIDED_TOOLS = [get_weather]
+@tool
+def get_weather() -> str:
+    """Get current local weather. Returns
+    current conditions, humidity, wind, and
+    tomorrow's forecast."""
+    return '\n'.join([
+        f'Location: Sydney Australia',
+        'Current conditions: 22C, partly cloudy',
+        'Humidity: 60%',
+        'Wind: 15 km/h from the East',
+        'Tomorrow\'s forecast: rain, with 5mm expected'
+    ])
+
+PROVIDED_TOOLS = [get_date_time, get_weather]
+MAX_TOOL_ROUNDS = 4
 
 # Class for invoking the LLM and
 # allowing it access to tools or RAG
@@ -38,10 +91,21 @@ class LLMConfiguration:
             model_name: str = 'gemma4:e4b',
             temperature: float = 0.2,
             seed: int = 42,
+            use_rag: bool = False,
             use_tools: bool = False):
 
+        self.use_rag = use_rag
         self.use_tools = use_tools
-        self.tools = PROVIDED_TOOLS.copy()
+        self.tools = []
+
+        # Allow use of the RAG search tool if specified
+        if self.use_rag:
+            self.tools.append(search_crystal_rock_group_documentation)
+
+        # Allow use of realtime tools if specified
+        if self.use_tools:
+            self.tools.extend(PROVIDED_TOOLS)
+
         self.tools_by_name = {t.name: t for t in self.tools}
         
         self.llm = ChatOllama(
@@ -51,34 +115,58 @@ class LLMConfiguration:
             seed=seed
         )
 
-        if self.use_tools:
+        if len(self.tools) > 0:
             self.llm = self.llm.bind_tools(self.tools)
 
-    def invoke(self, query: str) -> AIMessage:
-        messages: List = [
-            SYSTEM_PROMPT,
-            HumanMessage(query)
+    def invoke(
+        self,
+        query: str,
+        max_tool_rounds: int = MAX_TOOL_ROUNDS
+    ) -> AIMessage:
+        messages = [
+            build_system_message(self.use_tools, self.use_rag),
+            HumanMessage(content=query)
         ]
 
+        # Initial model response
         result = self.llm.invoke(messages)
-        messages.append(result)
+        tool_rounds = 0
 
-        if self.use_tools and isinstance(result, AIMessage) and result.tool_calls:
+        while result.tool_calls and tool_rounds < max_tool_rounds:
+            # Preserve the assistant response containing tool calls
+            messages.append(result)
+            tool_rounds += 1
+
+            # Execute every tool requested in this round
             for tool_call in result.tool_calls:
-                tool_result = self.tools_by_name[tool_call['name']].invoke(
-                    tool_call['args']
-                )
+                tool_name = tool_call['name']
+                tool_args = tool_call['args']
+                tool_call_id = tool_call['id']
+
+                tool = self.tools_by_name.get(tool_name)
+
+                if tool is None:
+                    tool_result = (
+                        f"Error: Unknown tool '{tool_name}'"
+                    )
+                else:
+                    try:
+                        tool_result = tool.invoke(tool_args)
+                    except Exception as exc:
+                        tool_result = f"Tool error: {exc}"
 
                 messages.append(
                     ToolMessage(
                         content=str(tool_result),
-                        tool_call_id=tool_call['id']
+                        tool_call_id=tool_call_id
                     )
                 )
 
-            # Second call: model receives tool result and responds
+            # Ask the model to continue with the tool results
             result = self.llm.invoke(messages)
 
+        # Return the last model response, even if the round
+        # limit was reached.
         return result
 
 if __name__ == '__main__':

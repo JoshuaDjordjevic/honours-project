@@ -128,27 +128,46 @@ class LLMConfiguration:
             HumanMessage(content=query)
         ]
 
+        self.last_token_usage = {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0,
+            "model_calls": 0,
+        }
+
+        def track_usage(message: AIMessage) -> None:
+            usage = message.usage_metadata or {}
+
+            self.last_token_usage["input_tokens"] += (
+                usage.get("input_tokens", 0)
+            )
+            self.last_token_usage["output_tokens"] += (
+                usage.get("output_tokens", 0)
+            )
+            self.last_token_usage["total_tokens"] += (
+                usage.get("total_tokens", 0)
+            )
+            self.last_token_usage["model_calls"] += 1
+
         # Initial model response
         result = self.llm.invoke(messages)
+        track_usage(result)
+
         tool_rounds = 0
 
         while result.tool_calls and tool_rounds < max_tool_rounds:
-            # Preserve the assistant response containing tool calls
             messages.append(result)
             tool_rounds += 1
 
-            # Execute every tool requested in this round
             for tool_call in result.tool_calls:
-                tool_name = tool_call['name']
-                tool_args = tool_call['args']
-                tool_call_id = tool_call['id']
+                tool_name = tool_call["name"]
+                tool_args = tool_call["args"]
+                tool_call_id = tool_call["id"]
 
                 tool = self.tools_by_name.get(tool_name)
 
                 if tool is None:
-                    tool_result = (
-                        f"Error: Unknown tool '{tool_name}'"
-                    )
+                    tool_result = f"Error: Unknown tool '{tool_name}'"
                 else:
                     try:
                         tool_result = tool.invoke(tool_args)
@@ -162,11 +181,10 @@ class LLMConfiguration:
                     )
                 )
 
-            # Ask the model to continue with the tool results
+            # Continue with the tool results
             result = self.llm.invoke(messages)
+            track_usage(result)
 
-        # Return the last model response, even if the round
-        # limit was reached.
         return result
 
 if __name__ == '__main__':

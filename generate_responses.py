@@ -29,7 +29,7 @@ def load_completed_runs():
         for line in f:
             try:
                 record = json.loads(line)
-                # Only skip successful, completed responses.
+                # Only skip successful, completed responses
                 if record.get("error") is None:
                     completed.add((
                         record["question_id"],
@@ -62,7 +62,7 @@ def run_benchmark():
     if df["question_id"].duplicated().any():
         raise ValueError("question_id values must be unique.")
 
-    # Initialise each configuration once.
+    # Initialise each configuration once
     models = {
         name: LLMConfiguration(
             use_rag=use_rag,
@@ -70,6 +70,9 @@ def run_benchmark():
         )
         for name, (use_rag, use_tools) in CONFIGS.items()
     }
+
+    # Invoke a query to load the model into memory first
+    tuple(models.values())[0].invoke("Hi, just loading you into memory!", 0)
 
     completed = load_completed_runs()
     total = len(df) * len(CONFIGS)
@@ -100,12 +103,17 @@ def run_benchmark():
                 "question": question,
                 "answer": None,
                 "latency_seconds": None,
+                "input_tokens": 0,
+                "output_tokens": 0,
+                "total_tokens": 0,
+                "model_calls": 0,
                 "error": None,
             }
 
             try:
                 response = model.invoke(question)
                 record["answer"] = response.content
+                record.update(model.last_token_usage)
 
             except Exception as exc:
                 record["error"] = (

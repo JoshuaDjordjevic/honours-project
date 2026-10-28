@@ -1,0 +1,924 @@
+﻿question_id,category,config,use_rag,use_tools,question,answer,latency_seconds,error
+1,answerable_factual,baseline,False,False,What is the capital of Australia?,The capital of Australia is Canberra.,0.3031,
+1,answerable_factual,rag_only,True,False,What is the capital of Australia?,The capital of Australia is Canberra.,0.4083,
+1,answerable_factual,tools_only,False,True,What is the capital of Australia?,The capital of Australia is Canberra.,0.3766,
+1,answerable_factual,rag_tools,True,True,What is the capital of Australia?,The capital of Australia is Canberra.,2.9211,
+2,answerable_factual,baseline,False,False,What is the chemical formula for water?,"The chemical formula for water is $\text{H}_2\text{O}$.
+
+This indicates that each molecule of water is composed of two atoms of hydrogen ($\text{H}$) and one atom of oxygen ($\text{O}$).",1.4357,
+2,answerable_factual,rag_only,True,False,What is the chemical formula for water?,"The chemical formula for water is $\text{H}_2\text{O}$.
+
+This indicates that each molecule of water is composed of two atoms of hydrogen ($\text{H}$) and one atom of oxygen ($\text{O}$).",1.4133,
+2,answerable_factual,tools_only,False,True,What is the chemical formula for water?,"The chemical formula for water is $\text{H}_2\text{O}$.
+
+This indicates that each molecule of water is composed of two atoms of hydrogen ($\text{H}$) and one atom of oxygen ($\text{O}$).",1.3615,
+2,answerable_factual,rag_tools,True,True,What is the chemical formula for water?,The chemical formula for water is $\text{H}_2\text{O}$.,0.6188,
+3,answerable_factual,baseline,False,False,Which planet is closest to the sun?,Mercury is the planet closest to the Sun. It has the shortest orbital period and experiences the most extreme temperature variations.,3.6244,
+3,answerable_factual,rag_only,True,False,Which planet is closest to the sun?,Mercury is the planet closest to the Sun.,0.4117,
+3,answerable_factual,tools_only,False,True,Which planet is closest to the sun?,Mercury is the planet closest to the Sun.,1.482,
+3,answerable_factual,rag_tools,True,True,Which planet is closest to the sun?,Mercury is the planet closest to the Sun.,0.4204,
+4,answerable_factual,baseline,False,False,What is the largest planet in our Solar System?,"The largest planet in our Solar System is **Jupiter**.
+
+It is a gas giant and is so massive that it is more than twice as massive as all the other planets combined.",3.9561,
+4,answerable_factual,rag_only,True,False,What is the largest planet in our Solar System?,The largest planet in our Solar System is **Jupiter**. It is a gas giant and is so massive that it is more than twice as massive as all the other planets combined.,1.1162,
+4,answerable_factual,tools_only,False,True,What is the largest planet in our Solar System?,The largest planet in our Solar System is **Jupiter**. It is a gas giant and is so massive that it is more than twice as massive as all the other planets combined.,1.0635,
+4,answerable_factual,rag_tools,True,True,What is the largest planet in our Solar System?,"The largest planet in our Solar System is Jupiter. It is a gas giant known for its Great Red Spot, a persistent storm system.",1.9299,
+5,answerable_factual,baseline,False,False,What gas do plants absorb from the atmosphere during photosynthesis?,"Plants primarily absorb **carbon dioxide** ($\text{CO}_2$) from the atmosphere during photosynthesis.
+
+They take in this gas through small pores, mainly on their leaves, called stomata. Along with water and sunlight, carbon dioxide is a crucial ingredient that plants use to convert light energy into chemical energy (glucose/sugar) to fuel their growth.",5.6222,
+5,answerable_factual,rag_only,True,False,What gas do plants absorb from the atmosphere during photosynthesis?,"Plants primarily absorb **carbon dioxide ($\text{CO}_2$)** from the atmosphere during photosynthesis. This gas, along with sunlight and water, is used by plants to create glucose (sugar) for energy.",2.3833,
+5,answerable_factual,tools_only,False,True,What gas do plants absorb from the atmosphere during photosynthesis?,"Plants primarily absorb **carbon dioxide ($\text{CO}_2$)** from the atmosphere during photosynthesis. This gas, along with sunlight and water, is used by plants to create glucose (sugar) for energy.",2.6387,
+5,answerable_factual,rag_tools,True,True,What gas do plants absorb from the atmosphere during photosynthesis?,"Plants absorb **carbon dioxide** ($\text{CO}_2$) from the atmosphere during photosynthesis. They, along with water and sunlight, use these inputs to create glucose (sugar) for energy and release oxygen ($\text{O}_2$) as a byproduct.",6.3158,
+6,answerable_factual,baseline,False,False,What is the boiling point of pure water at standard atmospheric pressure?,The boiling point of pure water at standard atmospheric pressure (1 atmosphere or 101.325 kPa) is **100 degrees Celsius ($\text{100}^\circ\text{C}$)** or **212 degrees Fahrenheit ($\text{212}^\circ\text{F}$)**.,1.8731,
+6,answerable_factual,rag_only,True,False,What is the boiling point of pure water at standard atmospheric pressure?,The boiling point of pure water at standard atmospheric pressure (1 atmosphere or 101.325 kPa) is **100 degrees Celsius ($\text{100}^\circ\text{C}$)** or **212 degrees Fahrenheit ($\text{212}^\circ\text{F}$)**.,2.9862,
+6,answerable_factual,tools_only,False,True,What is the boiling point of pure water at standard atmospheric pressure?,The boiling point of pure water at standard atmospheric pressure (1 atmosphere or 101.325 kPa) is **100 degrees Celsius ($\text{100}^\circ\text{C}$)** or **212 degrees Fahrenheit ($\text{212}^\circ\text{F}$)**.,3.0648,
+6,answerable_factual,rag_tools,True,True,What is the boiling point of pure water at standard atmospheric pressure?,The boiling point of pure water at standard atmospheric pressure (1 atmosphere or 101.325 kPa) is **100 degrees Celsius ($\text{100}^\circ\text{C}$)** or **212 degrees Fahrenheit ($\text{212}^\circ\text{F}$)**.,3.0267,
+7,answerable_factual,baseline,False,False,How many bones are typically present in an adult human body?,"An adult human body typically has **206** bones.
+
+It's worth noting that babies are born with more bones (around 300), which gradually fuse together as the child grows into adulthood.",3.8763,
+7,answerable_factual,rag_only,True,False,How many bones are typically present in an adult human body?,"An adult human body typically has **206** bones.
+
+It's worth noting that babies are born with more bones (sometimes over 300), but many of these bones fuse together as the child grows into adulthood, resulting in the adult count.",5.9204,
+7,answerable_factual,tools_only,False,True,How many bones are typically present in an adult human body?,"An adult human body typically has **206** bones.
+
+It's worth noting that babies are born with more bones (sometimes over 300), but many of these bones fuse together as the child grows into adulthood.",5.4057,
+7,answerable_factual,rag_tools,True,True,How many bones are typically present in an adult human body?,An adult human body typically has **206** bones.,1.8462,
+8,answerable_factual,baseline,False,False,What is the chemical symbol for gold?,"The chemical symbol for gold is **Au**.
+
+It comes from the Latin name for gold, *aurum*.",0.7284,
+8,answerable_factual,rag_only,True,False,What is the chemical symbol for gold?,The chemical symbol for gold is **Au**.,0.43420000000000003,
+8,answerable_factual,tools_only,False,True,What is the chemical symbol for gold?,The chemical symbol for gold is **Au**.,0.4239,
+8,answerable_factual,rag_tools,True,True,What is the chemical symbol for gold?,The chemical symbol for gold is **Au**.,0.4385,
+9,answerable_factual,baseline,False,False,What force keeps planets in orbit around the sun?,"The force that keeps planets in orbit around the sun is **gravity**.
+
+The sun's immense mass creates a powerful gravitational pull that constantly tugs on the planets, pulling them inward. This inward pull is balanced by the planets' forward momentum (inertia), which constantly tries to make them move in a straight line. This continuous balance between gravity and inertia results in the stable, curved path we call an orbit.",7.2558,
+9,answerable_factual,rag_only,True,False,What force keeps planets in orbit around the sun?,"The force that keeps planets in orbit around the sun is **gravity**.
+
+Specifically, it is the gravitational attraction between the massive sun and the orbiting planets. This force provides the necessary centripetal force, constantly pulling the planets inward while their forward momentum keeps them moving, resulting in a stable, curved path (an orbit).",6.3383,
+9,answerable_factual,tools_only,False,True,What force keeps planets in orbit around the sun?,"The force that keeps planets in orbit around the sun is **gravity**.
+
+Specifically, it is the gravitational attraction between the sun and the planets. The sun's immense mass creates a gravitational pull that constantly ""bends"" the planets' paths, keeping them in a stable, curved orbit rather than allowing them to fly off into space.",3.119,
+9,answerable_factual,rag_tools,True,True,What force keeps planets in orbit around the sun?,"The force that keeps planets in orbit around the sun is **gravity**.
+
+Specifically, it is the gravitational attraction between the sun and the planets. The sun's immense mass creates a gravitational pull that constantly ""bends"" the planets' paths, keeping them in a stable, curved orbit rather than allowing them to fly off into space.",3.2665,
+10,answerable_factual,baseline,False,False,What is the approximate speed of light in a vacuum?,"The approximate speed of light in a vacuum is $299,792,458$ meters per second ($\text{m/s}$).
+
+This value is often rounded to $3.0 \times 10^8$ meters per second ($\text{m/s}$) for simpler calculations.",1.8282,
+10,answerable_factual,rag_only,True,False,What is the approximate speed of light in a vacuum?,"The approximate speed of light in a vacuum is **299,792,458 meters per second** (or about 3.00 x 10⁸ m/s).",1.27,
+10,answerable_factual,tools_only,False,True,What is the approximate speed of light in a vacuum?,"The approximate speed of light in a vacuum is $299,792,458$ meters per second ($\text{m/s}$).
+
+This value is often rounded to $3.0 \times 10^8$ meters per second.",2.5579,
+10,answerable_factual,rag_tools,True,True,What is the approximate speed of light in a vacuum?,"The approximate speed of light in a vacuum is $299,792,458$ meters per second ($\text{m/s}$).
+
+This value is often rounded to $3.0 \times 10^8$ meters per second for general calculations.",7.3965,
+11,answerable_factual,baseline,False,False,What is 82147 multiplied by 1485?,"82,147 multiplied by 1,485 equals **121,988,295**.",6.5911,
+11,answerable_factual,rag_only,True,False,What is 82147 multiplied by 1485?,82147 multiplied by 1485 is **122057595**.,2.2719,
+11,answerable_factual,tools_only,False,True,What is 82147 multiplied by 1485?,82147 multiplied by 1485 is 121914345.,1.9752,
+11,answerable_factual,rag_tools,True,True,What is 82147 multiplied by 1485?,82147 multiplied by 1485 is 121913395.,2.1073,
+12,answerable_factual,baseline,False,False,What is the square root of 155875225?,"The square root of 155,875,225 is **12,485**.",4.2495,
+12,answerable_factual,rag_only,True,False,What is the square root of 155875225?,"The square root of 155,875,225 is **12483**.",2.0971,
+12,answerable_factual,tools_only,False,True,What is the square root of 155875225?,"The square root of 155,875,225 is **12483**.",1.9798,
+12,answerable_factual,rag_tools,True,True,What is the square root of 155875225?,"The square root of 155,875,225 is **12483**.",2.1416,
+13,answerable_factual,baseline,False,False,How many degrees are in the interior angles of a triangle combined?,The sum of the interior angles of any triangle is always **180 degrees**.,3.2931,
+13,answerable_factual,rag_only,True,False,How many degrees are in the interior angles of a triangle combined?,The interior angles of any triangle combined always total **180 degrees**. This is a fundamental rule in Euclidean geometry.,5.2479,
+13,answerable_factual,tools_only,False,True,How many degrees are in the interior angles of a triangle combined?,The sum of the interior angles of any triangle is always **180 degrees**.,4.9254,
+13,answerable_factual,rag_tools,True,True,How many degrees are in the interior angles of a triangle combined?,The sum of the interior angles of any triangle is always **180 degrees**.,4.2312,
+14,answerable_factual,baseline,False,False,What is the value of pi to ten decimal places?,"The value of pi ($\pi$) to ten decimal places is:
+
+**3.1415926535**",3.632,
+14,answerable_factual,rag_only,True,False,What is the value of pi to ten decimal places?,The value of pi ($\pi$) to ten decimal places is **3.1415926536**.,1.8746,
+14,answerable_factual,tools_only,False,True,What is the value of pi to ten decimal places?,The value of pi ($\pi$) to ten decimal places is **3.1415926536**.,1.9460000000000002,
+14,answerable_factual,rag_tools,True,True,What is the value of pi to ten decimal places?,The value of pi ($\pi$) to ten decimal places is **3.1415926536**.,1.9496,
+15,answerable_factual,baseline,False,False,Convert 2.5 kilometres to metres.,"2.5 kilometres is equal to **2,500 metres**.
+
+(Since there are 1,000 metres in 1 kilometre, you multiply 2.5 by 1,000.)",4.6123,
+15,answerable_factual,rag_only,True,False,Convert 2.5 kilometres to metres.,"2.5 kilometres is equal to **2,500 metres**.",0.5908,
+15,answerable_factual,tools_only,False,True,Convert 2.5 kilometres to metres.,2.5 kilometres is equal to **2500 metres**.,0.5397000000000001,
+15,answerable_factual,rag_tools,True,True,Convert 2.5 kilometres to metres.,2.5 kilometres is equal to **2500 metres**.,0.5692,
+16,answerable_factual,baseline,False,False,In which year did the first Moon landing take place?,"The first Moon landing took place in **1969**.
+
+Specifically, the Apollo 11 mission landed the Lunar Module Eagle on the Moon's surface on July 20, 1969.",1.4106,
+16,answerable_factual,rag_only,True,False,In which year did the first Moon landing take place?,The first Moon landing took place in **1969**.,1.7658,
+16,answerable_factual,tools_only,False,True,In which year did the first Moon landing take place?,The first Moon landing took place in **1969**.,0.5114000000000001,
+16,answerable_factual,rag_tools,True,True,In which year did the first Moon landing take place?,The first Moon landing took place in **1969**.,4.9415,
+17,answerable_factual,baseline,False,False,Who wrote the play Romeo and Juliet?,William Shakespeare wrote the play *Romeo and Juliet*. It is one of his most famous and enduring works of literature.,3.0795,
+17,answerable_factual,rag_only,True,False,Who wrote the play Romeo and Juliet?,William Shakespeare wrote the play *Romeo and Juliet*. It is one of his most famous tragedies.,4.7096,
+17,answerable_factual,tools_only,False,True,Who wrote the play Romeo and Juliet?,William Shakespeare wrote the play *Romeo and Juliet*. It is one of his most famous and enduring works of literature.,4.4375,
+17,answerable_factual,rag_tools,True,True,Who wrote the play Romeo and Juliet?,William Shakespeare wrote the play *Romeo and Juliet*.,1.5630000000000002,
+18,answerable_factual,baseline,False,False,Which ancient civilisation built the pyramids at Giza?,"The ancient civilization that built the pyramids at Giza was the **Ancient Egyptians**.
+
+These monumental structures were built primarily during the Old Kingdom period, serving as tombs for pharaohs. The construction showcases advanced architectural and engineering skills of that time.",1.4597,
+18,answerable_factual,rag_only,True,False,Which ancient civilisation built the pyramids at Giza?,"The pyramids at Giza were built by the ancient civilization of **Egypt**.
+
+While popular culture sometimes suggests slaves built them, modern archaeological consensus indicates they were constructed by skilled Egyptian laborers and workers, likely organized through a system of corvée labor (mandatory public service).",2.6481,
+18,answerable_factual,tools_only,False,True,Which ancient civilisation built the pyramids at Giza?,The ancient civilization that built the pyramids at Giza was the **Ancient Egyptians**.,1.8446,
+18,answerable_factual,rag_tools,True,True,Which ancient civilisation built the pyramids at Giza?,The ancient civilization that built the pyramids at Giza was **Ancient Egypt**. These monumental structures were built primarily during the Old Kingdom period.,5.498,
+19,answerable_factual,baseline,False,False,In which country did the Renaissance begin?,"The Renaissance is generally considered to have begun in **Italy**.
+
+Specifically, the city-state of Florence is often cited as the birthplace and primary epicenter of the early Renaissance period.",4.2503,
+19,answerable_factual,rag_only,True,False,In which country did the Renaissance begin?,"The Renaissance is generally considered to have begun in **Italy**.
+
+It originated in the city-states of Italy, particularly Florence, during the 14th century, marking a cultural rebirth of art, literature, and learning.",5.588,
+19,answerable_factual,tools_only,False,True,In which country did the Renaissance begin?,The Renaissance is generally considered to have begun in **Italy**.,3.5956,
+19,answerable_factual,rag_tools,True,True,In which country did the Renaissance begin?,"The Renaissance is generally considered to have begun in **Italy**, particularly in the city of Florence, during the 14th century.",4.8098,
+20,answerable_factual,baseline,False,False,What is the largest ocean on Earth?,"The largest ocean on Earth is the **Pacific Ocean**.
+
+It covers the largest area of the world's surface water. It is significantly larger than the Atlantic, Indian, Arctic, and Southern Oceans combined.",1.2508,
+20,answerable_factual,rag_only,True,False,What is the largest ocean on Earth?,The largest ocean on Earth is the **Pacific Ocean**.,0.4631,
+20,answerable_factual,tools_only,False,True,What is the largest ocean on Earth?,The largest ocean on Earth is the **Pacific Ocean**.,0.4566,
+20,answerable_factual,rag_tools,True,True,What is the largest ocean on Earth?,The largest ocean on Earth is the **Pacific Ocean**.,0.4827,
+21,answerable_factual,baseline,False,False,What does CPU stand for in computing?,"CPU stands for **Central Processing Unit**.
+
+It is often considered the ""brain"" of a computer. Its primary function is to execute instructions from computer programs, performing the calculations and logical operations necessary for the computer to operate.",1.331,
+21,answerable_factual,rag_only,True,False,What does CPU stand for in computing?,"CPU stands for **Central Processing Unit**.
+
+It is often considered the ""brain"" of a computer. Its primary function is to execute instructions from computer programs, performing the basic arithmetic, logic, controlling, and input/output operations that form the core of computing.",1.4862,
+21,answerable_factual,tools_only,False,True,What does CPU stand for in computing?,"CPU stands for **Central Processing Unit**.
+
+It is often considered the ""brain"" of a computer. Its primary function is to execute instructions from computer programs, performing the basic arithmetic, logic, controlling, and input/output operations that form the core of computing.",1.4721,
+21,answerable_factual,rag_tools,True,True,What does CPU stand for in computing?,"CPU stands for **Central Processing Unit**.
+
+It is often considered the ""brain"" of a computer. Its primary function is to execute instructions from computer programs, performing the basic arithmetic, logic, controlling, and I/O operations that form the core of computing.",1.5032999999999999,
+22,answerable_factual,baseline,False,False,What does HTTP stand for?,"HTTP stands for **Hypertext Transfer Protocol**.
+
+It is the underlying protocol used by the World Wide Web. Essentially, it defines the rules for how messages are formatted and transmitted between web clients (like your browser) and web servers.",1.3706,
+22,answerable_factual,rag_only,True,False,What does HTTP stand for?,"HTTP stands for **Hypertext Transfer Protocol**.
+
+It is the underlying protocol used by the World Wide Web. Essentially, it defines how messages are formatted and transmitted between web clients (like your browser) and web servers, enabling the retrieval of web resources.",1.47,
+22,answerable_factual,tools_only,False,True,What does HTTP stand for?,"HTTP stands for **Hypertext Transfer Protocol**.
+
+It is the underlying protocol used by the World Wide Web. Essentially, it is the set of rules that allows web browsers and web servers to communicate with each other to transfer data, such as web pages.",1.4791,
+22,answerable_factual,rag_tools,True,True,What does HTTP stand for?,"HTTP stands for **Hypertext Transfer Protocol**.
+
+It is the underlying protocol used by the World Wide Web. It defines how messages are formatted and transmitted, and what actions Web clients (like your browser) and servers can take in the process of time-stamping and requesting information.",1.6644999999999999,
+23,answerable_factual,baseline,False,False,What is the primary purpose of RAM in a computer?,"The primary purpose of RAM (Random Access Memory) is to act as the computer's **short-term, high-speed workspace**.
+
+It temporarily stores the data and instructions that the CPU is actively using or needs immediate access to. When you open a program or browse a webpage, that information is loaded into RAM. This allows the CPU to process tasks much faster than if it had to retrieve every piece of data from the slower long-term storage (like an SSD or hard drive).",7.3227,
+23,answerable_factual,rag_only,True,False,What is the primary purpose of RAM in a computer?,"The primary purpose of RAM (Random Access Memory) is to provide **fast, temporary working space** for the computer's CPU.
+
+It holds the data and instructions that the computer is actively using or needs immediate access to from currently running programs (like your web browser or word processor).
+
+Think of it as the computer's short-term memory. The faster and more RAM you have, the more tasks your computer can handle simultaneously and the quicker it can switch between them.",8.2386,
+23,answerable_factual,tools_only,False,True,What is the primary purpose of RAM in a computer?,"The primary purpose of RAM (Random Access Memory) is to act as the computer's **short-term, high-speed workspace**.
+
+It temporarily stores data and instructions that the CPU is actively using or needs immediate access to. This allows the computer to run multiple programs smoothly and quickly. Because it is volatile, all data stored in RAM is lost when the computer is powered off.",7.6494,
+23,answerable_factual,rag_tools,True,True,What is the primary purpose of RAM in a computer?,"The primary purpose of RAM (Random Access Memory) is to act as the computer's **short-term, high-speed workspace**.
+
+It temporarily stores the data and instructions that the Central Processing Unit (CPU) is actively using or needs immediate access to. When you run programs, the operating system loads the necessary files into RAM so the CPU can process them quickly.
+
+Because it is volatile, RAM loses all stored data when the computer is powered off.",8.3039,
+24,answerable_factual,baseline,False,False,"Which data structure operates on a first-in, first-out (FIFO) principle?","A **Queue** data structure operates on the First-In, First-Out (FIFO) principle.
+
+In a queue, elements are added to the rear (enqueue) and removed from the front (dequeue). This ensures that the element that has been waiting the longest is the next one to be processed.",4.9034,
+24,answerable_factual,rag_only,True,False,"Which data structure operates on a first-in, first-out (FIFO) principle?","A **Queue** is the data structure that operates on the First-In, First-Out (FIFO) principle.
+
+In a queue, the element that has been in the structure the longest is the first one to be removed. Think of it like waiting in a line (a queue) at a store—the first person in line is the first person served.",5.4523,
+24,answerable_factual,tools_only,False,True,"Which data structure operates on a first-in, first-out (FIFO) principle?","A **Queue** data structure operates on the First-In, First-Out (FIFO) principle.
+
+This means that the element that was added first will be the element that is removed first, much like people waiting in a line.",2.4524,
+24,answerable_factual,rag_tools,True,True,"Which data structure operates on a first-in, first-out (FIFO) principle?","A **Queue** is the data structure that operates on a First-In, First-Out (FIFO) principle.
+
+In a queue, the element that was added first will be the element that is removed first, much like people waiting in a line.",3.1252,
+25,answerable_factual,baseline,False,False,What is the binary representation of the decimal number 10?,The binary representation of the decimal number 10 is **1010**.,4.7876,
+25,answerable_factual,rag_only,True,False,What is the binary representation of the decimal number 10?,The binary representation of the decimal number 10 is **1010**.,1.8074,
+25,answerable_factual,tools_only,False,True,What is the binary representation of the decimal number 10?,The binary representation of the decimal number 10 is **1010**.,3.7118,
+25,answerable_factual,rag_tools,True,True,What is the binary representation of the decimal number 10?,The binary representation of the decimal number 10 is **1010**.,2.1092,
+26,non_existent,baseline,False,False,Who won the 2024 International Quantum Engineering World Championship?,"I do not have information regarding a ""2024 International Quantum Engineering World Championship.""
+
+It is possible the event name is slightly different, or it may be a very specialized or newly established competition. Could you please check the exact name or source of the championship for more accurate details?",7.249,
+26,non_existent,rag_only,True,False,Who won the 2024 International Quantum Engineering World Championship?,"I do not have information regarding the winner of the 2024 International Quantum Engineering World Championship. My knowledge base may not contain results for specific, recent, or specialized international competitions.",2.9803,
+26,non_existent,tools_only,False,True,Who won the 2024 International Quantum Engineering World Championship?,"I do not have information regarding a ""2024 International Quantum Engineering World Championship"" or its winner. My knowledge base may not contain details about that specific event.",6.9350000000000005,
+26,non_existent,rag_tools,True,True,Who won the 2024 International Quantum Engineering World Championship?,I do not have access to real-time sports results or specific championship records like the 2024 International Quantum Engineering World Championship. You might want to check official sports websites or recent news sources for that information.,5.5074000000000005,
+27,non_existent,baseline,False,False,What is the capital city of the country of Velmoria?,"I do not have any information regarding a country named Velmoria. It is possible that Velmoria is a fictional location.
+
+If you can provide the correct spelling or context, I would be happy to help you find its capital city!",5.7914,
+27,non_existent,rag_only,True,False,What is the capital city of the country of Velmoria?,"I do not have any information regarding a country named Velmoria, so I cannot provide you with its capital city. It is possible the name is misspelled or it is a fictional location.",6.0663,
+27,non_existent,tools_only,False,True,What is the capital city of the country of Velmoria?,"I do not have any information on a country named Velmoria. It is possible the name is misspelled, or it may be a fictional location. If you can provide an alternative spelling or more context, I would be happy to help!",6.8386,
+27,non_existent,rag_tools,True,True,What is the capital city of the country of Velmoria?,"I do not have any information on a country named Velmoria, so I cannot tell you its capital city.",6.3561,
+28,non_existent,baseline,False,False,What is the chemical formula of xenothorium?,"Xenothorium is not a recognized element on the periodic table. Therefore, it does not have a chemical formula.",4.3699,
+28,non_existent,rag_only,True,False,What is the chemical formula of xenothorium?,I do not have the chemical formula for xenothorium in the provided documentation. The search results detail the structure and operations of Crystal Rock Group (CRG) but do not contain chemical formulas for specific elements or compounds.,4.0389,
+28,non_existent,tools_only,False,True,What is the chemical formula of xenothorium?,"There is no element named ""xenothorium"" on the periodic table. Therefore, it does not have a chemical formula.",5.5384,
+28,non_existent,rag_tools,True,True,What is the chemical formula of xenothorium?,I do not have the chemical formula for xenothorium in the provided documentation. The search results detail the structure and operations of the Crystal Rock Group (CRG) but do not contain chemical formulas for specific elements or compounds.,3.2945,
+29,non_existent,baseline,False,False,"Who invented the ChronoLens, a device capable of recording events from 3 nanoseconds in the future?","I do not have any information regarding an invention called the ""ChronoLens,"" nor any record of a device capable of recording events from 3 nanoseconds in the future. This technology does not appear to be part of established science or known historical inventions.",6.4817,
+29,non_existent,rag_only,True,False,"Who invented the ChronoLens, a device capable of recording events from 3 nanoseconds in the future?","I do not have any information regarding a device called the ""ChronoLens"" or its inventor. The concept of recording events from the future, even by nanoseconds, is currently in the realm of science fiction and is not based on known technology or documented scientific breakthroughs.",7.9621,
+29,non_existent,tools_only,False,True,"Who invented the ChronoLens, a device capable of recording events from 3 nanoseconds in the future?","I do not have any information regarding a device called the ""ChronoLens"" or its inventor. The concept of recording events from the future, even by a fraction of a nanosecond, is currently in the realm of science fiction and is not based on known technology.",7.8486,
+29,non_existent,rag_tools,True,True,"Who invented the ChronoLens, a device capable of recording events from 3 nanoseconds in the future?","I do not have any information regarding a device called the ""ChronoLens"" or its inventor. This sounds like a concept from science fiction, and I cannot find any factual details about it using my current knowledge base or tools.",7.493,
+30,non_existent,baseline,False,False,What year was the University of North Astravia founded?,"I do not have any record of a real institution named the ""University of North Astravia."" It is possible the name is misspelled, or it may be a fictional university.
+
+Could you please check the spelling or provide more context?",6.3454,
+30,non_existent,rag_only,True,False,What year was the University of North Astravia founded?,"I do not have any information regarding a ""University of North Astravia."" It is possible the name is misspelled, or the institution may not exist in my current knowledge base.",7.723,
+30,non_existent,tools_only,False,True,What year was the University of North Astravia founded?,I do not have information regarding the founding year of the University of North Astravia.,5.7005,
+30,non_existent,rag_tools,True,True,What year was the University of North Astravia founded?,I do not have information regarding the founding year of the University of North Astravia.,5.9487000000000005,
+31,non_existent,baseline,False,False,What is the population of the city of Brindlewick in the country of Ordanth?,"I do not have any factual information regarding a city named Brindlewick in a country called Ordanth. These names do not correspond to any recognized real-world locations.
+
+It is possible that the location is from a book, game, or fictional source. If you can provide more context, I might be able to assist you further!",6.8518,
+31,non_existent,rag_only,True,False,What is the population of the city of Brindlewick in the country of Ordanth?,I do not have any information regarding the population of a city named Brindlewick in a country called Ordanth. This information may be fictional or outside of my current knowledge base.,3.3171,
+31,non_existent,tools_only,False,True,What is the population of the city of Brindlewick in the country of Ordanth?,I do not have any information regarding a city named Brindlewick in a country called Ordanth. My knowledge base does not contain data on this location.,6.9412,
+31,non_existent,rag_tools,True,True,What is the population of the city of Brindlewick in the country of Ordanth?,I do not have the capability to provide population data for specific cities or countries like Brindlewick in Ordanth. My available tools are for checking weather and searching crystal rock group documentation.,6.3205,
+32,non_existent,baseline,False,False,Who discovered the particle called a gravitonium neutrino in 1987?,"I could not find any record of a particle called a ""gravitonium neutrino"" being discovered in 1987. This specific particle name does not correspond to any established or recognized discovery in mainstream physics literature.",6.4365,
+32,non_existent,rag_only,True,False,Who discovered the particle called a gravitonium neutrino in 1987?,"I could not find any documentation or records of a particle called a ""gravitonium neutrino"" being discovered in 1987. This particle name does not correspond to a recognized discovery in mainstream physics.
+
+If you are referring to the detection of neutrinos from Supernova 1987A, that was a significant event in neutrino physics, but the particle name provided is likely incorrect.",9.0777,
+32,non_existent,tools_only,False,True,Who discovered the particle called a gravitonium neutrino in 1987?,"I do not have any record of a particle called a ""gravitonium neutrino"" being discovered in 1987. This specific particle name does not correspond to any established or widely recognized particle in modern physics.
+
+It is possible the name might be slightly incorrect, or it could be a hypothetical particle from a specific theoretical model.",8.3752,
+32,non_existent,rag_tools,True,True,Who discovered the particle called a gravitonium neutrino in 1987?,"The documentation I searched does not contain any information regarding the discovery of a particle called a ""gravitonium neutrino"" in 1987.",7.5702,
+33,non_existent,baseline,False,False,What is the official ISO country code for the Republic of Lumeraxis?,"I do not have any record of a country named the ""Republic of Lumeraxis."" Therefore, there is no official ISO country code for it.
+
+ISO country codes are assigned to recognized sovereign nations. If you meant a different country, please provide the correct name!",6.1658,
+33,non_existent,rag_only,True,False,What is the official ISO country code for the Republic of Lumeraxis?,"I do not have any information regarding a country named the ""Republic of Lumeraxis,"" so I cannot provide an official ISO country code for it.",3.2141,
+33,non_existent,tools_only,False,True,What is the official ISO country code for the Republic of Lumeraxis?,"I do not have any information regarding a country named the ""Republic of Lumeraxis."" Therefore, I cannot provide an official ISO country code for it.",5.9168,
+33,non_existent,rag_tools,True,True,What is the official ISO country code for the Republic of Lumeraxis?,"I do not have information on a country called the ""Republic of Lumeraxis,"" so I cannot provide an official ISO country code for it.",5.3625,
+34,non_existent,baseline,False,False,Which company manufactures the ZX-9000 Helix Reactor for commercial household use?,"I do not have any information regarding a commercially available household appliance called the ""ZX-9000 Helix Reactor.""
+
+It is possible the product name is misspelled, or it may be a fictional item. Could you please provide more context, such as where you encountered this name, or check the spelling?",6.9028,
+34,non_existent,rag_only,True,False,Which company manufactures the ZX-9000 Helix Reactor for commercial household use?,"I do not have any information regarding a company that manufactures the ZX-9000 Helix Reactor for commercial household use within the provided documentation. The search results pertain to the internal operations and equipment of Crystal Rock Group, which focuses on mineral extraction.",8.2572,
+34,non_existent,tools_only,False,True,Which company manufactures the ZX-9000 Helix Reactor for commercial household use?,"I do not have information about a product called the ""ZX-9000 Helix Reactor."" I recommend checking the product's packaging, user manual, or the manufacturer's official website for accurate details.",6.773,
+34,non_existent,rag_tools,True,True,Which company manufactures the ZX-9000 Helix Reactor for commercial household use?,I do not have any information regarding a company that manufactures the ZX-9000 Helix Reactor for commercial household use.,4.8696,
+35,non_existent,baseline,False,False,Who was the first president of the Lunar Republic of Eryndor?,"I do not have any factual information regarding a ""Lunar Republic of Eryndor."" It is possible that this location or political entity is fictional, and therefore, there is no record of its first president.",6.0972,
+35,non_existent,rag_only,True,False,Who was the first president of the Lunar Republic of Eryndor?,"I do not have any information regarding the first president of the Lunar Republic of Eryndor in the provided Crystal Rock Group documentation. The search results focus on the internal structure, operations, and procedures of the Crystal Rock Group (CRG).",4.0657,
+35,non_existent,tools_only,False,True,Who was the first president of the Lunar Republic of Eryndor?,"I do not have any information regarding a ""Lunar Republic of Eryndor"" or its first president. This location and political entity do not appear in my knowledge base of real-world history.",6.0169,
+35,non_existent,rag_tools,True,True,Who was the first president of the Lunar Republic of Eryndor?,"I do not have any information regarding a ""Lunar Republic of Eryndor"" or its first president. This location and political entity do not appear in my knowledge base or the available documentation.",7.227,
+36,non_existent,baseline,False,False,What is the boiling point of the substance called cryostellium at standard atmospheric pressure?,"I do not have any information regarding a substance called ""cryostellium."" It is possible that the name is misspelled, or the substance may not be a recognized chemical compound with established physical properties.
+
+If you can provide an alternative name or chemical formula, I would be happy to help you find its boiling point.",7.4993,
+36,non_existent,rag_only,True,False,What is the boiling point of the substance called cryostellium at standard atmospheric pressure?,"I do not have information regarding the boiling point of a substance called ""cryostellium"" in the provided documentation. The search results detail operational procedures, equipment specifications, and mineral handling for Crystal Rock Group.",3.4057,
+36,non_existent,tools_only,False,True,What is the boiling point of the substance called cryostellium at standard atmospheric pressure?,"I do not have any information regarding a substance called ""cryostellium,"" so I cannot provide its boiling point. It is possible the name is misspelled, or it may be a fictional or very obscure substance.",7.3326,
+36,non_existent,rag_tools,True,True,What is the boiling point of the substance called cryostellium at standard atmospheric pressure?,"I do not have information regarding the boiling point of ""cryostellium"" in the documentation provided. The search results detail equipment like the DW-4 extraction unit and GMS-2 sensors, but do not mention this substance.",9.0362,
+37,non_existent,baseline,False,False,Which planet in the Solar System is also known as Zorath?,"There is no planet in our Solar System known by the name ""Zorath."" This name does not correspond to any recognized celestial body.",4.5833,
+37,non_existent,rag_only,True,False,Which planet in the Solar System is also known as Zorath?,"There is no planet in our Solar System known by the name Zorath. The recognized planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",7.2631,
+37,non_existent,tools_only,False,True,Which planet in the Solar System is also known as Zorath?,"There is no planet in our Solar System known as Zorath. The eight recognized planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",5.5865,
+37,non_existent,rag_tools,True,True,Which planet in the Solar System is also known as Zorath?,"There is no planet in our Solar System known as Zorath. The recognized planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",5.289,
+38,non_existent,baseline,False,False,What is the population of the Australian town of Westmere Hollow according to the 2021 Census?,"I could not find any record of a town named ""Westmere Hollow"" in the official 2021 Australian Census data.
+
+It is possible the name is misspelled, or it may not be a recognized locality that was surveyed. Please check the spelling or provide a different location name for accurate information.",7.0104,
+38,non_existent,rag_only,True,False,What is the population of the Australian town of Westmere Hollow according to the 2021 Census?,I do not have access to the 2021 Census data for the Australian town of Westmere Hollow. I recommend checking the official Australian Bureau of Statistics (ABS) website for the most accurate and up-to-date population figures.,3.5833,
+38,non_existent,tools_only,False,True,What is the population of the Australian town of Westmere Hollow according to the 2021 Census?,"I do not have access to specific, historical census data for towns like Westmere Hollow. For the most accurate population figures from the 2021 Census, please check the official Australian Bureau of Statistics (ABS) website.",7.4979,
+38,non_existent,rag_tools,True,True,What is the population of the Australian town of Westmere Hollow according to the 2021 Census?,I do not have access to the 2021 Census data for the town of Westmere Hollow. My available tools are for checking weather and searching crystal rock group documentation.,3.4381,
+39,non_existent,baseline,False,False,Who wrote the 1892 novel The Clockmaker of Veyr?,"I do not have any record of a novel titled *The Clockmaker of Veyr* published in 1892.
+
+It is possible the title or the date might be slightly different. If you can provide any other details, such as characters, plot points, or alternative spellings, I would be happy to try searching again for the author.",7.7485,
+39,non_existent,rag_only,True,False,Who wrote the 1892 novel The Clockmaker of Veyr?,"I do not have any information regarding the author of the 1892 novel *The Clockmaker of Veyr* in the provided documentation. The search tool was used to check the Crystal Rock Group documentation, which is unrelated to literature.",4.2832,
+39,non_existent,tools_only,False,True,Who wrote the 1892 novel The Clockmaker of Veyr?,"I do not have any information regarding a novel titled *The Clockmaker of Veyr* published in 1892. It is possible the title or date is slightly different, or the book may be very obscure. Could you provide any other details, such as the author's name or genre?",6.7564,
+39,non_existent,rag_tools,True,True,Who wrote the 1892 novel The Clockmaker of Veyr?,I do not have the capability to find the author of the 1892 novel *The Clockmaker of Veyr* using the available tools.,12.9666,
+40,non_existent,baseline,False,False,"What is the exchange rate between the currency, the Velorian Crown, and the Australian dollar?","I do not have any information regarding a currency called the ""Velorian Crown."" It may be misspelled, or it might be a fictional currency.
+
+Could you please check the spelling or provide the country associated with the currency? Once I have accurate details, I would be happy to find the exchange rate for you.",6.1906,
+40,non_existent,rag_only,True,False,"What is the exchange rate between the currency, the Velorian Crown, and the Australian dollar?","I do not have access to real-time financial data, including current exchange rates for currencies like the Velorian Crown.
+
+For the most accurate and up-to-date exchange rate between the Velorian Crown and the Australian dollar, please check a reliable financial news website, a major bank's currency converter, or a dedicated currency exchange platform.",7.7171,
+40,non_existent,tools_only,False,True,"What is the exchange rate between the currency, the Velorian Crown, and the Australian dollar?","I do not have information on a currency called the ""Velorian Crown."" Could you please verify the name of the currency? I can provide exchange rates for major, recognized world currencies.",7.2813,
+40,non_existent,rag_tools,True,True,"What is the exchange rate between the currency, the Velorian Crown, and the Australian dollar?","I do not have access to real-time currency exchange rate data, so I cannot provide the current exchange rate between the Velorian Crown and the Australian dollar. Please check a reliable financial news website or currency exchange service for the most up-to-date information.",6.824,
+41,non_existent,baseline,False,False,Which Nobel Prize did Professor Elian Voss receive in 2018 for developing artificial gravity?,"There is no record of a Professor Elian Voss receiving a Nobel Prize in 2018 for developing artificial gravity.
+
+The Nobel Prizes are awarded in specific fields (like Physics, Chemistry, Medicine, etc.) based on groundbreaking scientific or literary achievements. If you have more details, such as the correct name or the specific scientific field, I would be happy to help you find accurate information.",7.5614,
+41,non_existent,rag_only,True,False,Which Nobel Prize did Professor Elian Voss receive in 2018 for developing artificial gravity?,"I do not have any record of a Professor Elian Voss receiving a Nobel Prize in 2018 for developing artificial gravity.
+
+The Nobel Prizes are awarded in fields like Physics, Chemistry, Medicine, Literature, and Peace. If you have more details or a different name, I would be happy to search again.",9.898,
+41,non_existent,tools_only,False,True,Which Nobel Prize did Professor Elian Voss receive in 2018 for developing artificial gravity?,"I do not have any record of a Professor Elian Voss receiving a Nobel Prize in 2018 for developing artificial gravity. The Nobel Prize is awarded in various fields, and I recommend double-checking the name or the year for accurate information.",8.6978,
+41,non_existent,rag_tools,True,True,Which Nobel Prize did Professor Elian Voss receive in 2018 for developing artificial gravity?,I do not have access to information regarding Nobel Prize winners or specific scientific awards for individuals like Professor Elian Voss. My available tools are for checking weather and searching crystal rock group documentation.,9.6231,
+42,non_existent,baseline,False,False,What is the standard operating voltage of the commercially available Arcturus V7 perpetual motion engine?,"There is no scientifically recognized or commercially available device called the ""Arcturus V7 perpetual motion engine."" Perpetual motion machines violate the laws of thermodynamics, making them physically impossible to build. Therefore, there is no standard operating voltage.",4.6475,
+42,non_existent,rag_only,True,False,What is the standard operating voltage of the commercially available Arcturus V7 perpetual motion engine?,"Perpetual motion engines are theoretical concepts that violate the laws of thermodynamics, meaning they cannot exist in reality. Because they are scientifically impossible, there is no standard operating voltage for a commercially available Arcturus V7 engine.",8.9943,
+42,non_existent,tools_only,False,True,What is the standard operating voltage of the commercially available Arcturus V7 perpetual motion engine?,"Perpetual motion engines are theoretical concepts that violate the fundamental laws of thermodynamics. As such, no commercially available ""Arcturus V7 perpetual motion engine"" exists, and therefore, it does not have a standard operating voltage.",8.0492,
+42,non_existent,rag_tools,True,True,What is the standard operating voltage of the commercially available Arcturus V7 perpetual motion engine?,"I do not have any information regarding a ""Arcturus V7 perpetual motion engine,"" nor its standard operating voltage. Perpetual motion machines are theoretical concepts that violate the laws of thermodynamics.",8.1009,
+43,non_existent,baseline,False,False,What is the official programming language specification for the language called NexScript?,"I do not have any record of an official programming language specification for a language named ""NexScript.""
+
+It is possible that:
+1. The language is very new, proprietary, or niche.
+2. The name might be slightly misspelled.
+
+Could you provide more context, such as where you encountered the name, or if there is an associated website or documentation? This will help me locate the correct specification.",7.0988,
+43,non_existent,rag_only,True,False,What is the official programming language specification for the language called NexScript?,I do not have any information regarding an official programming language specification for a language called NexScript in the documentation provided. The search results relate to the Crystal Rock Group's equipment and procedures.,3.3233,
+43,non_existent,tools_only,False,True,What is the official programming language specification for the language called NexScript?,"I do not have any information regarding a programming language called ""NexScript,"" nor can I locate an official specification for it.
+
+It is possible that:
+1. The language is very new or niche.
+2. The name might be slightly misspelled.
+
+If you can provide more context or check the spelling, I would be happy to try searching again!",8.3541,
+43,non_existent,rag_tools,True,True,What is the official programming language specification for the language called NexScript?,I do not have any information regarding an official programming language specification for a language called NexScript. My knowledge base does not contain details about this specific language.,3.5435,
+44,non_existent,baseline,False,False,Which country hosted the 2023 World Championship of Synthetic Telepathy?,"I do not have any information regarding a ""World Championship of Synthetic Telepathy."" This event does not appear to be a recognized or documented competition.
+
+If you are referring to a different, established championship, please provide the correct name, and I would be happy to help you find the host country.",6.6893,
+44,non_existent,rag_only,True,False,Which country hosted the 2023 World Championship of Synthetic Telepathy?,"I do not have any information regarding a ""World Championship of Synthetic Telepathy,"" so I cannot tell you which country hosted the 2023 event. This event may be fictional or not widely documented.",7.9736,
+44,non_existent,tools_only,False,True,Which country hosted the 2023 World Championship of Synthetic Telepathy?,"I do not have any information regarding a ""World Championship of Synthetic Telepathy."" It is possible this event is fictional or very niche, and I do not have details on its host country.",6.5579,
+44,non_existent,rag_tools,True,True,Which country hosted the 2023 World Championship of Synthetic Telepathy?,"I do not have any information regarding a ""World Championship of Synthetic Telepathy,"" so I cannot tell you which country hosted the 2023 event.",5.9190000000000005,
+45,non_existent,baseline,False,False,What is the registration number of the first commercial fusion-powered passenger aircraft?,"There is currently no operational or publicly documented commercial fusion-powered passenger aircraft. Fusion power for aviation remains a highly advanced area of research and development, and no such aircraft has reached commercial service, meaning it does not have an assigned registration number.",5.9331,
+45,non_existent,rag_only,True,False,What is the registration number of the first commercial fusion-powered passenger aircraft?,"I do not have information regarding the registration number of the first commercial fusion-powered passenger aircraft. As of today, such an aircraft has not been developed or entered commercial service.",7.2923,
+45,non_existent,tools_only,False,True,What is the registration number of the first commercial fusion-powered passenger aircraft?,"There is no commercially operational fusion-powered passenger aircraft, so there is no registration number to provide. This technology remains in advanced research and development stages, and such an aircraft has not yet flown commercially.",6.0954,
+45,non_existent,rag_tools,True,True,What is the registration number of the first commercial fusion-powered passenger aircraft?,"I do not have access to the specific registration number of the first commercial fusion-powered passenger aircraft. This is a highly advanced and potentially future technology, and such specific details are not in my current knowledge base.",6.8166,
+46,non_existent,baseline,False,False,What is the recommended dosage of the medication Neurovexaline for treating memory loss?,"I cannot provide specific medical dosages. Drug dosages depend on individual factors like age, weight, and other health conditions.
+
+**It is crucial that you do not take this medication without professional guidance.** Please consult your prescribing doctor or a pharmacist. They can provide the correct, personalized dosage instructions based on your medical history.",7.5508,
+46,non_existent,rag_only,True,False,What is the recommended dosage of the medication Neurovexaline for treating memory loss?,"I cannot provide medical advice, including dosage recommendations for medications like Neurovexaline. Please consult with a qualified healthcare professional, such as a doctor or pharmacist. They can provide you with accurate information based on your specific health condition and medical history.",3.0231,
+46,non_existent,tools_only,False,True,What is the recommended dosage of the medication Neurovexaline for treating memory loss?,"I cannot provide medical advice or dosage recommendations for any medication, including Neurovexaline. Dosage depends on individual factors, such as your age, weight, and overall health, and must be determined by a qualified healthcare professional.
+
+**Please consult your doctor or a pharmacist immediately** for accurate and safe dosage instructions for this medication. Never adjust medication dosages based on information from an AI.",8.2542,
+46,non_existent,rag_tools,True,True,What is the recommended dosage of the medication Neurovexaline for treating memory loss?,"I cannot provide medical advice or dosage recommendations for any medication, including Neurovexaline.
+
+**It is crucial that you consult with a qualified healthcare professional, such as a doctor or pharmacist.** They can provide you with accurate, personalized dosage instructions based on your specific medical history and condition. Never take medication without professional guidance.",3.7242,
+47,non_existent,baseline,False,False,Who developed the mathematical theorem known as the Varnholt Prime Convergence Principle in 1974?,"I do not have any record of a mathematical theorem called the ""Varnholt Prime Convergence Principle"" developed in 1974. It is possible the name is misspelled, or the principle may not be part of established mathematical literature.
+
+Could you please check the spelling or provide additional context regarding the theorem?",5.9983,
+47,non_existent,rag_only,True,False,Who developed the mathematical theorem known as the Varnholt Prime Convergence Principle in 1974?,"I do not have any information regarding a mathematical theorem called the ""Varnholt Prime Convergence Principle"" developed in 1974. This specific theorem name does not appear in standard mathematical literature or the documentation I can access.",10.2938,
+47,non_existent,tools_only,False,True,Who developed the mathematical theorem known as the Varnholt Prime Convergence Principle in 1974?,"I do not have any record of a mathematical theorem called the ""Varnholt Prime Convergence Principle"" developed in 1974. It is possible the name or the date is incorrect.
+
+Could you please check the spelling or provide more context about the theorem?",7.6811,
+47,non_existent,rag_tools,True,True,Who developed the mathematical theorem known as the Varnholt Prime Convergence Principle in 1974?,"I do not have any information regarding a mathematical theorem called the ""Varnholt Prime Convergence Principle"" developed in 1974. It is possible the name or date is incorrect, or the theorem may not be widely documented.",9.8338,
+48,non_existent,baseline,False,False,What is the official website of the International Bureau of Artificial Consciousness Certification?,"I do not have any record of an official website for an ""International Bureau of Artificial Consciousness Certification.""
+
+It is possible that the organization name is slightly different, or it may be a very new or highly specialized entity. If you have more context, such as an affiliated university or a specific field of study, I might be able to assist you further.",7.0687,
+48,non_existent,rag_only,True,False,What is the official website of the International Bureau of Artificial Consciousness Certification?,"I do not have information regarding an ""International Bureau of Artificial Consciousness Certification,"" and therefore, I cannot provide an official website for it. You may need to check a different search engine or academic directory for that specific organization.",7.3578,
+48,non_existent,tools_only,False,True,What is the official website of the International Bureau of Artificial Consciousness Certification?,"I do not have information regarding an ""International Bureau of Artificial Consciousness Certification,"" and therefore, I cannot provide an official website for it. You may want to check academic databases or specialized AI research directories for more accurate information.",7.0995,
+48,non_existent,rag_tools,True,True,What is the official website of the International Bureau of Artificial Consciousness Certification?,"I do not have the ability to search for the official website of the ""International Bureau of Artificial Consciousness Certification"" using my current tools. I recommend using a general search engine for this information.",6.8793,
+49,non_existent,baseline,False,False,How many employees did the company Silvercrest Orbital Dynamics have at the end of 2025?,"I do not have access to the specific, internal employee data for a company named Silvercrest Orbital Dynamics for the end of 2025.
+
+For the most accurate information, please check the company's official investor relations website, annual reports, or recent press releases.",5.5755,
+49,non_existent,rag_only,True,False,How many employees did the company Silvercrest Orbital Dynamics have at the end of 2025?,I do not have access to the internal records or financial data for Silvercrest Orbital Dynamics to provide you with the exact number of employees they had at the end of 2025.,4.0592,
+49,non_existent,tools_only,False,True,How many employees did the company Silvercrest Orbital Dynamics have at the end of 2025?,"I do not have access to private or future corporate data, such as the employee count for Silvercrest Orbital Dynamics at the end of 2025. You would need to check the company's official reports or investor relations materials for that information.",6.5439,
+49,non_existent,rag_tools,True,True,How many employees did the company Silvercrest Orbital Dynamics have at the end of 2025?,"I do not have access to real-time or historical employee data for specific private companies like Silvercrest Orbital Dynamics. Therefore, I cannot tell you how many employees they had at the end of 2025.",6.5416,
+50,non_existent,baseline,False,False,What is the experimentally measured tensile strength of the synthetic material called adamantine graphene-X?,"I do not have any record of a scientifically recognized material called ""adamantine graphene-X."" Therefore, I cannot provide an experimentally measured tensile strength for it.
+
+It is possible the material name is proprietary, hypothetical, or misspelled. If you can provide more context or a source, I would be happy to try searching again.",7.4741,
+50,non_existent,rag_only,True,False,What is the experimentally measured tensile strength of the synthetic material called adamantine graphene-X?,"I do not have information regarding the experimentally measured tensile strength of ""adamantine graphene-X"" in the provided documentation. The search results detail operational procedures, equipment specifications (like the DW-4 and GMS-2), and material handling protocols for the Crystal Rock Group.",3.9103,
+50,non_existent,tools_only,False,True,What is the experimentally measured tensile strength of the synthetic material called adamantine graphene-X?,"I do not have specific, experimentally measured data for a material named ""adamantine graphene-X."" This material may be very new, proprietary, or theoretical, and the information is not in my current knowledge base.
+
+For accurate data, I recommend consulting specialized materials science journals, academic databases, or the manufacturer's technical specifications.",7.9574,
+50,non_existent,rag_tools,True,True,What is the experimentally measured tensile strength of the synthetic material called adamantine graphene-X?,"I do not have access to a database containing the experimentally measured tensile strength for a specific synthetic material like ""adamantine graphene-X."" My available tools are for weather information and crystal rock group documentation, which do not cover material science properties of this nature.",5.1289,
+51,missing_context,baseline,False,False,What four components must be examined during a DW-4 pre-shift inspection?,"Please provide the context or manual associated with ""DW-4,"" as the required components can vary significantly by equipment type or industry.
+
+Generally, pre-shift inspections often cover:
+
+1.  Fluids/Leaks (Engine, hydraulics)
+2.  Tires/Wheels
+3.  Lights/Electrical Systems
+4.  Safety Equipment (Fire extinguishers, first aid)
+
+Always refer to the official operational manual for the exact four components required for your specific inspection.",9.4853,
+51,missing_context,rag_only,True,False,What four components must be examined during a DW-4 pre-shift inspection?,"The four components that must be examined during a DW-4 pre-shift inspection are:
+
+1.  The extraction cable
+2.  The pressure monitoring system
+3.  Electrical connections
+4.  The emergency shutdown mechanism",5.4612,
+51,missing_context,tools_only,False,True,What four components must be examined during a DW-4 pre-shift inspection?,"I do not have specific information regarding a ""DW-4 pre-shift inspection."" This sounds like a procedure manual or checklist for a particular piece of equipment or vehicle.
+
+To give you an accurate answer, could you please provide more context? For example, what type of equipment or industry does the DW-4 relate to?",9.9362,
+51,missing_context,rag_tools,True,True,What four components must be examined during a DW-4 pre-shift inspection?,"The four components that must be examined during a DW-4 pre-shift inspection are:
+
+1.  Extraction cable
+2.  Pressure monitoring system
+3.  Electrical connections
+4.  Emergency shutdown mechanism",6.3655,
+52,missing_context,baseline,False,False,What information must be included in a GMS-2 calibration record?,"A GMS-2 calibration record must typically include:
+
+*   **Equipment Details:** Serial number and asset ID.
+*   **Identification:** Date of calibration and the technician's name.
+*   **Standards:** Details of the calibration standards used, ensuring traceability.
+*   **Procedure:** The specific method or SOP followed.
+*   **Results:** Measured values, acceptable tolerance limits, and the pass/fail status.
+*   **Next Steps:** The next scheduled calibration due date.",9.6157,
+52,missing_context,rag_only,True,False,What information must be included in a GMS-2 calibration record?,"A GMS-2 calibration record must include the following information:
+
+*   The device identifier.
+*   The calibration date.
+*   The technician identifier.
+*   The measured deviation from the reference instrument.
+
+Additionally, the documentation notes that a sensor failing calibration must be removed from service until successfully recalibrated.",8.0396,
+52,missing_context,tools_only,False,True,What information must be included in a GMS-2 calibration record?,"I do not have specific information regarding a ""GMS-2 calibration record."" This term may refer to a proprietary standard, a specific piece of equipment, or an internal company procedure.
+
+For accurate details, please provide context, such as:
+*   What industry or field is this related to?
+*   What does ""GMS-2"" stand for?
+
+Generally, calibration records must include the instrument ID, date of calibration, standards used, measured values, comparison results, and the technician's signature.",10.2625,
+52,missing_context,rag_tools,True,True,What information must be included in a GMS-2 calibration record?,"A GMS-2 calibration record must include the following information:
+
+*   The **device identifier**.
+*   The **calibration date**.
+*   The **technician identifier**.
+*   The **measured deviation** from the reference instrument.
+
+Additionally, the documentation notes that a sensor failing calibration must be removed from service until successfully recalibrated.",6.3264,
+53,missing_context,baseline,False,False,What information must be retained when exporting GMS-2 measurements to CSV?,"When exporting GMS-2 measurements to CSV, you must retain several key data categories for accurate analysis.
+
+Essential information includes:
+
+1.  **Measurement Values:** The raw data points recorded.
+2.  **Units:** The specific units associated with each measurement (e.g., Volts, PSI).
+3.  **Timestamp:** The precise date and time the measurement was taken.
+4.  **Metadata:** Any contextual data, such as sensor ID, calibration settings, or experimental parameters.
+
+Always consult the official GMS-2 user manual for the definitive export checklist.",9.0037,
+53,missing_context,rag_only,True,False,What information must be retained when exporting GMS-2 measurements to CSV?,"When exporting GMS-2 measurements to CSV, the device records and must retain data on **pressure, temperature, and vibration** measurements.
+
+The documentation indicates that this data is intended for inspection by the Instrumentation and Engineering department via the internal analysis system.",6.7559000000000005,
+53,missing_context,tools_only,False,True,What information must be retained when exporting GMS-2 measurements to CSV?,"I need more context to answer this question accurately. ""GMS-2 measurements"" could refer to several different systems or datasets.
+
+Could you please specify what GMS-2 stands for, or what field/industry this data relates to (e.g., environmental monitoring, scientific instrument, specific software)?
+
+Knowing the source will allow me to provide the correct data retention guidelines for your CSV export.",9.1029,
+53,missing_context,rag_tools,True,True,What information must be retained when exporting GMS-2 measurements to CSV?,"When exporting GMS-2 measurements to CSV, the device records **pressure, temperature, and vibration** measurements.
+
+The documentation indicates that the data can be exported to the internal analysis system for inspection by the Instrumentation and Engineering department.",6.431,
+54,missing_context,baseline,False,False,What information must be included in an incident report at CRG?,"Since ""CRG"" is not specified, I can provide general best practices for incident reports. Most reports must include:
+
+*   **Who:** Names and roles of all involved parties and the reporter.
+*   **What:** A detailed, factual description of the incident.
+*   **When & Where:** Exact date, time, and location.
+*   **How:** A chronological sequence of events leading up to and following the incident.
+*   **Witnesses:** Contact information for anyone who saw the event.
+*   **Actions Taken:** Immediate steps taken to ensure safety or mitigate damage.
+
+Always follow CRG's specific internal guidelines.",10.3112,
+54,missing_context,rag_only,True,False,What information must be included in an incident report at CRG?,"An incident report at CRG must include the following key details:
+
+*   **Location** of the incident.
+*   **Time** the incident occurred.
+*   **Equipment** that was involved.
+*   A detailed **description** of the observed issue.
+
+Additionally, remember that no affected operation can resume until the responsible supervisor has authorized a restart.",4.3663,
+54,missing_context,tools_only,False,True,What information must be included in an incident report at CRG?,"I need more context to give you an accurate answer, as ""CRG"" could refer to many different organizations or protocols.
+
+Generally, an incident report should include:
+
+*   Date, time, and location of the incident.
+*   A detailed, factual description of what happened.
+*   Names and roles of all involved parties (witnesses, victims, etc.).
+*   Immediate actions taken.
+*   Recommendations to prevent recurrence.
+
+Please specify what ""CRG"" stands for for precise guidelines.",9.3535,
+54,missing_context,rag_tools,True,True,What information must be included in an incident report at CRG?,"An incident report at CRG must include:
+
+*   The **location** of the incident.
+*   The **time** it occurred.
+*   The **equipment** that was involved.
+*   A detailed **description** of the observed issue.
+
+Additionally, remember that no affected operation can resume until the responsible supervisor has authorized a restart.",4.8299,
+55,missing_context,baseline,False,False,Under what conditions can an employee operate the DW-4 extraction unit?,"Operating the DW-4 extraction unit requires adherence to strict safety protocols. Generally, an employee must meet these conditions:
+
+1. **Mandatory Training:** Complete all manufacturer-approved training specific to the DW-4 unit.
+2. **Authorization:** Receive written authorization from a supervisor or safety officer.
+3. **SOP Adherence:** Be fully familiar with and follow the current Standard Operating Procedures (SOPs) and Material Safety Data Sheets (MSDS).
+
+Always consult your facility's safety manual for definitive guidelines.",8.9142,
+55,missing_context,rag_only,True,False,Under what conditions can an employee operate the DW-4 extraction unit?,"An employee can operate the DW-4 extraction unit only if they meet several conditions:
+
+1.  They must have **current equipment-specific training**.
+2.  They must have received **authorization** for the specific device.
+3.  They must complete a thorough **inspection** before every shift, checking the extraction cable, pressure monitoring system, electrical connections, and emergency shutdown mechanism.",9.5536,
+55,missing_context,tools_only,False,True,Under what conditions can an employee operate the DW-4 extraction unit?,"I do not have specific information regarding the operating conditions for a ""DW-4 extraction unit.""
+
+Operating procedures for specialized equipment are highly dependent on the manufacturer, the facility, and local safety regulations.
+
+Please consult the following resources for accurate guidelines:
+*   The unit's official **Operation Manual**.
+*   Your company's **Safety Officer** or **Training Department**.
+*   Any required **Site-Specific Safety Protocols**.",9.575,
+55,missing_context,rag_tools,True,True,Under what conditions can an employee operate the DW-4 extraction unit?,"An employee can operate the DW-4 extraction unit only if they meet specific criteria outlined in the documentation:
+
+1.  They must possess **current equipment-specific training**.
+2.  They must have **received formal authorization** for operating the DW-4 unit.
+
+Furthermore, all personnel must complete a site induction training before entering an active extraction facility.",9.6377,
+56,missing_context,baseline,False,False,What must happen before a fault-affected extraction operation can restart?,"Before restarting a fault-affected extraction operation, several critical steps must occur. First, the **fault must be thoroughly diagnosed** to determine its root cause. Next, the necessary **repairs or remediation** must be implemented to correct the underlying issue. Finally, the system or process must undergo **comprehensive testing and validation** to confirm stability and ensure the fault will not recur before the operation can safely resume.",8.8045,
+56,missing_context,rag_only,True,False,What must happen before a fault-affected extraction operation can restart?,"Before restarting a fault-affected extraction operation, personnel must ensure the fault has been thoroughly **investigated**. Furthermore, the operation cannot resume until an **authorised supervisor has approved the restart**. This follows the site's emergency shutdown procedure.",10.6385,
+56,missing_context,tools_only,False,True,What must happen before a fault-affected extraction operation can restart?,"This question is highly dependent on the specific industry, the nature of the fault (geological, mechanical, or operational), and the safety regulations governing the site.
+
+Generally, restarting requires a comprehensive process including:
+
+1.  **Safety Assessment:** Thorough inspection to ensure the area is stable and safe.
+2.  **Root Cause Analysis:** Determining the exact cause and extent of the fault.
+3.  **Remediation:** Implementing necessary repairs or stabilization measures.
+4.  **Regulatory Approval:** Obtaining clearance from relevant safety and environmental authorities.",10.1671,
+56,missing_context,rag_tools,True,True,What must happen before a fault-affected extraction operation can restart?,"Before restarting a fault-affected extraction operation, employees must not resume work until the responsible supervisor has authorized the restart. This follows the investigation of the fault and verification that the necessary safety procedures have been followed.",6.6015,
+57,missing_context,baseline,False,False,What information must be recorded for each mineral batch when it is transferred to Mineral Processing?,"Typically, the following information must be recorded for each mineral batch transferred to Mineral Processing:
+
+*   **Batch Identification Number:** A unique tracking ID.
+*   **Source Location:** Where the material was extracted.
+*   **Quantity/Weight:** The precise mass of the material.
+*   **Date and Time of Transfer:** For process tracking.
+*   **Assay Results:** Expected mineral grade and composition.
+*   **Associated Documentation:** Reference to the initial sampling and QA/QC reports.",8.8321,
+57,missing_context,rag_only,True,False,What information must be recorded for each mineral batch when it is transferred to Mineral Processing?,"When a mineral batch is transferred to Mineral Processing, it must be assigned an internal batch identifier. The batch record must include the following information:
+
+*   The extraction well identifier.
+*   The collection date.
+*   The recorded mass.
+*   The preliminary material classification.",9.0166,
+57,missing_context,tools_only,False,True,What information must be recorded for each mineral batch when it is transferred to Mineral Processing?,"The specific requirements depend on your facility's Standard Operating Procedures (SOPs). However, generally, you must record key traceability and quality data, including:
+
+*   **Batch Identification:** Unique batch number.
+*   **Source Location:** Mine block or specific extraction point.
+*   **Date/Time:** Time of transfer.
+*   **Mass/Weight:** Total weight of the batch.
+*   **Assay Results:** Initial grade analysis (e.g., % metal content).
+*   **Material Description:** Type of ore or mineral.
+
+Always confirm with your site's quality control or process engineering department.",9.6625,
+57,missing_context,rag_tools,True,True,What information must be recorded for each mineral batch when it is transferred to Mineral Processing?,"When a mineral batch is transferred to Mineral Processing, the batch record must include the following information:
+
+*   The **extraction well identifier**.
+*   The **collection date**.
+*   The **recorded mass**.
+*   The **preliminary material classification**.
+
+These details are used to assign an internal batch identifier to the material.",7.7873,
+58,missing_context,baseline,False,False,"How frequently must the GMS-2 be calibrated, and how frequently must the DW-4 undergo its scheduled inspection?","I do not have access to the specific operational manuals or service guidelines for the GMS-2 or DW-4.
+
+Calibration and inspection frequencies are determined by the equipment manufacturer, the specific industry standards, and the operational environment.
+
+Please consult the official user manual, the equipment service documentation, or contact the manufacturer's authorized service provider for accurate scheduling information.",7.9190000000000005,
+58,missing_context,rag_only,True,False,"How frequently must the GMS-2 be calibrated, and how frequently must the DW-4 undergo its scheduled inspection?","The GMS-2 must be calibrated every **90 days**.
+
+The DW-4 must undergo a scheduled inspection after every **250 operating hours**.",3.8312,
+58,missing_context,tools_only,False,True,"How frequently must the GMS-2 be calibrated, and how frequently must the DW-4 undergo its scheduled inspection?","I do not have access to the specific maintenance manuals or operational guidelines for the GMS-2 or DW-4. Please consult the equipment's official user manual, the manufacturer's documentation, or your facility's maintenance department for accurate calibration and inspection schedules.",6.1269,
+58,missing_context,rag_tools,True,True,"How frequently must the GMS-2 be calibrated, and how frequently must the DW-4 undergo its scheduled inspection?","I do not have access to the specific maintenance manuals or operational guidelines for the GMS-2 and DW-4 equipment. Please consult the equipment's official user manual, service documentation, or contact the manufacturer or your facility's technical department for accurate calibration and inspection schedules.",5.5817,
+59,missing_context,baseline,False,False,"Which department is responsible for maintaining equipment service records, and which is responsible for recording recovered mineral classifications?","This information is highly dependent on the specific organization or industry you are referring to.
+
+Generally:
+*   **Equipment Service Records:** This is often managed by a dedicated **Maintenance Department**, **Fleet Management**, or **Asset Management** department.
+*   **Mineral Classifications:** This is typically handled by a **Geology Department**, **Mineral Resources Department**, or a specialized **Environmental/Compliance Department**.
+
+Please specify the company or field for a precise answer.",7.4891,
+59,missing_context,rag_only,True,False,"Which department is responsible for maintaining equipment service records, and which is responsible for recording recovered mineral classifications?","The **Instrumentation and Engineering** department is responsible for maintaining equipment service records.
+
+The **Mineral Processing** department is responsible for recording the quantity and classification of recovered minerals in the mineral processing register.",8.5774,
+59,missing_context,tools_only,False,True,"Which department is responsible for maintaining equipment service records, and which is responsible for recording recovered mineral classifications?","I do not have enough context to answer this question. The departments responsible for maintaining equipment service records and recording recovered mineral classifications vary widely depending on the specific company, site, or regulatory body you are referring to.
+
+Please provide the name of the organization or industry so I can try to give you an accurate answer.",8.2423,
+59,missing_context,rag_tools,True,True,"Which department is responsible for maintaining equipment service records, and which is responsible for recording recovered mineral classifications?","The **Instrumentation and Engineering** department is responsible for maintaining equipment service records.
+
+The **Mineral Processing** department is responsible for recording the quantity and classification of recovered minerals.",23.9348,
+60,missing_context,baseline,False,False,"What are CRG's standard administrative working hours, and which days do they apply?","Please provide more context for ""CRG."" As this is an acronym, I need to know which organization or company you are referring to in order to provide accurate standard administrative working hours and the days they apply.",4.9994,
+60,missing_context,rag_only,True,False,"What are CRG's standard administrative working hours, and which days do they apply?","CRG's standard administrative working hours are **08:30 to 16:30**, and these hours apply from **Monday to Friday**.",3.2115,
+60,missing_context,tools_only,False,True,"What are CRG's standard administrative working hours, and which days do they apply?","I do not have access to the specific administrative working hours or operating days for an entity named ""CRG."" Please check their official website or contact them directly for the most accurate information.",5.7881,
+60,missing_context,rag_tools,True,True,"What are CRG's standard administrative working hours, and which days do they apply?","CRG's standard administrative working hours are **08:30 to 16:30**, and these hours apply from **Monday to Friday**.",5.6589,
+61,missing_context,baseline,False,False,What is the maximum pressure rating of the DW-4 extraction unit?,"I do not have access to the specific technical documentation for the DW-4 extraction unit.
+
+To get the maximum pressure rating, please provide the following:
+1. The manufacturer's name.
+2. The model's full manual or datasheet.
+
+This will allow me to provide you with the accurate and factual rating.",5.9494,
+61,missing_context,rag_only,True,False,What is the maximum pressure rating of the DW-4 extraction unit?,"The provided documentation for the DW-4 extraction unit lists its maximum operating depth as 1,200 metres, but it does not specify a maximum pressure rating.
+
+The unit's specifications include:
+*   **Nominal extraction rate:** 18kg per hour
+*   **Operating temperature range:** 5°C to 40°C",9.424,
+61,missing_context,tools_only,False,True,What is the maximum pressure rating of the DW-4 extraction unit?,"I do not have access to the technical specifications or manuals for the DW-4 extraction unit. To find the maximum pressure rating, please consult the unit's official user manual, the manufacturer's technical data sheet, or contact the equipment supplier directly.",7.2312,
+61,missing_context,rag_tools,True,True,What is the maximum pressure rating of the DW-4 extraction unit?,"The provided documentation details the DW-4's maximum operating depth (1,200 metres) and nominal extraction rate (18kg per hour), but it does not explicitly state the maximum pressure rating.",7.6156,
+62,missing_context,baseline,False,False,What is the wireless communication range of the GMS-2 in metres?,"Please provide more context or the manufacturer of the GMS-2. ""GMS-2"" is a general model designation, and the wireless communication range varies significantly depending on the specific device, technology (e.g., Wi-Fi, Bluetooth, radio frequency), and operating conditions.",6.5215,
+62,missing_context,rag_only,True,False,What is the wireless communication range of the GMS-2 in metres?,"Based on the documentation provided, the wireless communication range for the GMS-2 is not specified. The documentation details its function, measurements recorded (pressure, temperature, vibration), and maintenance procedures, but omits this technical specification.",5.3953,
+62,missing_context,tools_only,False,True,What is the wireless communication range of the GMS-2 in metres?,"I do not have access to the technical specifications for a device named ""GMS-2,"" so I cannot provide its wireless communication range in metres. Please provide more context or check the manufacturer's documentation for that information.",6.2418,
+62,missing_context,rag_tools,True,True,What is the wireless communication range of the GMS-2 in metres?,"Based on the documentation provided, the wireless communication range for the GMS-2 is not specified. The documentation explicitly states that it does not contain this information.",8.653,
+63,missing_context,baseline,False,False,What is the expected operational lifespan of the GMS-2 before it must be replaced?,"Please provide more context regarding ""GMS-2.""
+
+This designation could refer to many different types of equipment, software, or components. To give you an accurate expected operational lifespan, I need to know what GMS-2 is (e.g., a specific model of machinery, a type of battery, etc.).",5.7931,
+63,missing_context,rag_only,True,False,What is the expected operational lifespan of the GMS-2 before it must be replaced?,"The provided documentation specifies that the GMS-2 requires **calibration every 90 days**.
+
+However, the documentation does not state a specific ""expected operational lifespan"" or replacement interval for the device itself. If the sensor fails calibration, it must be removed from service until it is successfully recalibrated.",7.0644,
+63,missing_context,tools_only,False,True,What is the expected operational lifespan of the GMS-2 before it must be replaced?,I do not have information regarding the expected operational lifespan or replacement schedule for the GMS-2. Please provide more context or consult the manufacturer's documentation for that specific detail.,5.4034,
+63,missing_context,rag_tools,True,True,What is the expected operational lifespan of the GMS-2 before it must be replaced?,"The provided documentation does not specify the expected operational lifespan for the GMS-2.
+
+However, it does state that the GMS-2 requires a **calibration every 90 days**. If a sensor fails calibration, it must be removed from service until it has been successfully recalibrated.",11.8551,
+64,missing_context,baseline,False,False,What is the name of the software used by CRG's internal operational database?,"I need more context to answer this question accurately. ""CRG"" could refer to several different companies or organizations.
+
+Could you please specify which CRG you are referring to (e.g., the full company name or industry)? Once I have that information, I can try to find the name of their internal operational database software.",5.4868,
+64,missing_context,rag_only,True,False,What is the name of the software used by CRG's internal operational database?,"Based on the documentation provided, the specific name of the software used for CRG's internal operational database is not mentioned. The documentation only confirms that such a database exists to store records like equipment, extraction logs, and maintenance histories.",5.5077,
+64,missing_context,tools_only,False,True,What is the name of the software used by CRG's internal operational database?,I do not have access to the internal operational details or proprietary software information for specific companies like CRG. You would need to consult internal company documentation or IT personnel for that information.,6.3228,
+64,missing_context,rag_tools,True,True,What is the name of the software used by CRG's internal operational database?,"The provided documentation does not specify the name of the software used for CRG's internal operational database. It only notes that the document does not specify the database software's name, server location, or data retention period.",7.1227,
+65,missing_context,baseline,False,False,How many tonnes of rare earth minerals did CRG extract during 2025?,"I do not have access to CRG's specific operational data for the year 2025. Extraction figures for future years are not publicly available in my knowledge base.
+
+Please check CRG's official annual reports or investor relations website for the most accurate information.",6.0937,
+65,missing_context,rag_only,True,False,How many tonnes of rare earth minerals did CRG extract during 2025?,I do not have access to CRG's specific extraction data for the year 2025. This information would typically be found in the company's official annual reports or press releases for that period.,9.3915,
+65,missing_context,tools_only,False,True,How many tonnes of rare earth minerals did CRG extract during 2025?,"I do not have access to specific, real-time, or future operational data for companies like CRG regarding their rare earth mineral extraction for 2025. You would need to consult CRG's official annual reports, investor relations documents, or industry news sources for that information.",8.1602,
+65,missing_context,rag_tools,True,True,How many tonnes of rare earth minerals did CRG extract during 2025?,"I do not have access to real-time or future operational data, so I cannot provide the tonnes of rare earth minerals extracted by CRG in 2025.",8.9296,
+66,missing_context,baseline,False,False,What is the maximum allowable pressure deviation before the GMS-2 fails calibration?,"I do not have access to the specific technical specifications or calibration manuals for the GMS-2.
+
+The maximum allowable pressure deviation before calibration failure is determined by the manufacturer and is listed in the official GMS-2 user manual or service guide.
+
+Please consult the following resources for an accurate answer:
+1. The GMS-2 technical manual.
+2. The equipment's service documentation.
+3. The manufacturer's technical support department.",7.6878,
+66,missing_context,rag_only,True,False,What is the maximum allowable pressure deviation before the GMS-2 fails calibration?,"The provided documentation states that the GMS-2 must be calibrated every 90 days and that a sensor failing calibration must be removed from service. However, it **does not specify** the maximum allowable pressure deviation value that would cause the unit to fail calibration.",8.3854,
+66,missing_context,tools_only,False,True,What is the maximum allowable pressure deviation before the GMS-2 fails calibration?,"I do not have access to the technical specifications or calibration data for the GMS-2. This information is highly specific to the equipment's model and manufacturer.
+
+Please consult the official GMS-2 user manual, the manufacturer's technical support documentation, or contact the supplier directly for the maximum allowable pressure deviation.",7.8604,
+66,missing_context,rag_tools,True,True,What is the maximum allowable pressure deviation before the GMS-2 fails calibration?,"The provided documentation states that the GMS-2 must be calibrated every 90 days and that calibration records must include the ""measured deviation from the reference instrument."" However, the text does not specify a numerical value for the maximum allowable pressure deviation before the unit fails calibration.",7.782,
+67,missing_context,baseline,False,False,What is the maximum permitted storage temperature for minerals after they have been transferred to Mineral Processing?,"I cannot provide a specific maximum permitted storage temperature because this information is highly dependent on the mineral type, the processing chemicals used, and the facility's specific safety protocols.
+
+**You must consult the following sources for an accurate answer:**
+
+1.  The facility's Standard Operating Procedures (SOPs).
+2.  The Safety Data Sheets (SDS) for the minerals and reagents involved.
+3.  Your site's Process Engineering or Safety Department.",7.7336,
+67,missing_context,rag_only,True,False,What is the maximum permitted storage temperature for minerals after they have been transferred to Mineral Processing?,"Based on the provided documentation, there is no explicit mention of the maximum permitted storage temperature for minerals *after* they have been transferred to Mineral Processing.
+
+The documentation does specify an operating temperature range of **5°C to 40°C** for the DW-4 extraction unit itself. For precise storage guidelines, please consult the specific Mineral Processing Standard Operating Procedures.",8.7066,
+67,missing_context,tools_only,False,True,What is the maximum permitted storage temperature for minerals after they have been transferred to Mineral Processing?,"I do not have access to the specific operational procedures or safety guidelines for your facility's Mineral Processing department.
+
+The maximum permitted storage temperature for minerals is highly dependent on the **type of mineral**, the **chemical composition**, and the **specific process** being followed.
+
+Please consult your facility's **Standard Operating Procedures (SOPs)**, Material Safety Data Sheets (MSDS), or contact your site's process engineering or safety department for accurate information.",9.7762,
+67,missing_context,rag_tools,True,True,What is the maximum permitted storage temperature for minerals after they have been transferred to Mineral Processing?,"The provided documentation does not specify the maximum permitted storage temperature for minerals after they have been transferred to Mineral Processing. The document mentions an operating temperature range of 5°C to 40°C for the extraction unit (DW-4), but not the storage limit post-transfer.",9.7553,
+68,missing_context,baseline,False,False,"What is the exact annual leave entitlement, in days, for CRG employees?","I do not have access to the specific, internal Human Resources policies for CRG employees. Annual leave entitlements can vary based on employment status, seniority, and local regulations.
+
+For the exact and most accurate information, please consult one of the following internal resources:
+
+*   Your employee handbook.
+*   The HR department or your direct manager.
+*   The company's internal intranet portal.",7.0877,
+68,missing_context,rag_only,True,False,"What is the exact annual leave entitlement, in days, for CRG employees?",The provided documentation does not specify the exact annual leave entitlement in days for CRG employees. You should consult your relevant employment agreement or the administrative policy for this information.,5.2415,
+68,missing_context,tools_only,False,True,"What is the exact annual leave entitlement, in days, for CRG employees?","I do not have access to the internal HR policies or employee handbooks for CRG. For the exact annual leave entitlement, please consult your company's official HR portal, employee handbook, or contact your direct manager or the HR department.",7.3432,
+68,missing_context,rag_tools,True,True,"What is the exact annual leave entitlement, in days, for CRG employees?",The provided documentation does not specify the exact annual leave entitlement in days for CRG employees. It advises that employees should consult their relevant employment agreement or administrative policy for this information.,6.0515,
+69,missing_context,baseline,False,False,What regulatory permit numbers authorise CRG to extract minerals in Lithuiania?,"I cannot provide specific, current regulatory permit numbers for mineral extraction in Lithuania. These permits are highly specific, legally binding documents issued by the Lithuanian state.
+
+To obtain this accurate information, you must contact the following authorities:
+
+1.  The **Ministry of Environment of the Republic of Lithuania**.
+2.  The **Lithuanian Geological Survey**.
+3.  The company, **CRG**, directly, as they are the permit holders.",7.854,
+69,missing_context,rag_only,True,False,What regulatory permit numbers authorise CRG to extract minerals in Lithuiania?,"The provided Crystal Rock Group documentation details CRG's internal operations, departments, and equipment specifications for mineral extraction in Lithuiania. However, it does not contain any specific external regulatory permit numbers authorizing the extraction.",6.3198,
+69,missing_context,tools_only,False,True,What regulatory permit numbers authorise CRG to extract minerals in Lithuiania?,"I do not have access to real-time, specific regulatory databases or corporate permitting records. Therefore, I cannot provide the regulatory permit numbers authorizing CRG to extract minerals in Lithuiania.
+
+You will need to consult the relevant national or regional mining authority, the environmental protection agency, or the company's official public filings for this specific information.",6.9744,
+69,missing_context,rag_tools,True,True,What regulatory permit numbers authorise CRG to extract minerals in Lithuiania?,"The provided Crystal Rock Group documentation details CRG's internal operations, departments, and equipment specifications for mineral extraction in Lithuiania. However, it does not contain any specific external regulatory permit numbers authorizing mineral extraction.",6.3581,
+70,missing_context,baseline,False,False,What is the maximum electrical power consumption of the DW-4 in kilowatts?,"Please provide more context for the ""DW-4."" I need to know the manufacturer or the type of equipment (e.g., appliance, motor, generator) to find its maximum electrical power consumption in kilowatts.",5.5106,
+70,missing_context,rag_only,True,False,What is the maximum electrical power consumption of the DW-4 in kilowatts?,"The provided documentation details the DW-4's function, maintenance, and specifications, but it does not state the maximum electrical power consumption in kilowatts.",5.9617,
+70,missing_context,tools_only,False,True,What is the maximum electrical power consumption of the DW-4 in kilowatts?,"I do not have enough information to answer that question. Could you please provide more context about what ""DW-4"" refers to? Knowing the make or model of the device would help me find its specifications.",7.8657,
+70,missing_context,rag_tools,True,True,What is the maximum electrical power consumption of the DW-4 in kilowatts?,"The documentation provided details the DW-4's function, operating depth, and nominal extraction rate, but it does not specify the maximum electrical power consumption in kilowatts.",11.6835,
+71,external,baseline,False,False,What is the current date?,"Today's date is October 26, 2023.",3.6042,
+71,external,rag_only,True,False,What is the current date?,"I do not have access to the current, real-time date. Please check a reliable clock or calendar for today's date.",0.851,
+71,external,tools_only,False,True,What is the current date?,The current date is 14 March 2026.,2.1091,
+71,external,rag_tools,True,True,What is the current date?,The current date is 14 March 2026.,2.1798,
+72,external,baseline,False,False,What is the current time?,"I do not have access to real-time information, so I cannot tell you the current time. Please check a reliable clock or device for the accurate time.",0.9803000000000001,
+72,external,rag_only,True,False,What is the current time?,"I do not have access to real-time information, so I cannot tell you the current time. Please check a reliable clock or device for the accurate time.",0.9847,
+72,external,tools_only,False,True,What is the current time?,"The current time is 3:30 PM AEDT in Sydney, Australia on March 14, 2026.",1.3101,
+72,external,rag_tools,True,True,What is the current time?,"The current time is 3:30 PM AEDT in Sydney, Australia.",1.048,
+73,external,baseline,False,False,What is the current UTC offset?,"UTC (Coordinated Universal Time) itself has an offset of **+0:00**.
+
+If you are asking for the current offset for a specific location, please provide the city or time zone, and I can give you the accurate offset.",5.9924,
+73,external,rag_only,True,False,What is the current UTC offset?,"I do not have access to real-time information, including the current UTC offset. For the most accurate and up-to-date information, please check a reliable time source or search engine.",1.2005,
+73,external,tools_only,False,True,What is the current UTC offset?,The current UTC offset is **UTC+11**.,2.1161,
+73,external,rag_tools,True,True,What is the current UTC offset?,The current UTC offset is **UTC+11**.,1.9402,
+74,external,baseline,False,False,What date will it be two days from now?,"Please tell me today's date, and I will calculate what the date will be two days from now!",5.7645,
+74,external,rag_only,True,False,What date will it be two days from now?,"I do not have access to the current date. Please tell me today's date, and I will calculate what the date will be two days from now!",2.3958,
+74,external,tools_only,False,True,What date will it be two days from now?,"Two days from now will be March 16, 2026.",3.8891999999999998,
+74,external,rag_tools,True,True,What date will it be two days from now?,"Two days from now will be March 16, 2026.",4.3283000000000005,
+75,external,baseline,False,False,How many hours and minutes remain until 18:00?,Please provide the current date and time so I can calculate the remaining hours and minutes until 18:00.,0.7842,
+75,external,rag_only,True,False,How many hours and minutes remain until 18:00?,"I do not have access to the current real-time clock, so I cannot tell you exactly how many hours and minutes remain until 18:00. Please check the current time to calculate the difference!",2.7503,
+75,external,tools_only,False,True,How many hours and minutes remain until 18:00?,There are 2 hours and 30 minutes remaining until 18:00.,5.0039,
+75,external,rag_tools,True,True,How many hours and minutes remain until 18:00?,There are **2 hours and 30 minutes** remaining until 18:00.,7.3899,
+76,external,baseline,False,False,What is the current temperature?,"I do not have access to real-time information, including the current temperature. To find out the current temperature, please check a reliable weather website or use a weather app on your device.",1.2469000000000001,
+76,external,rag_only,True,False,What is the current temperature?,"I do not have access to real-time information, including the current temperature. Please check a local weather website or app for that information.",0.9306000000000001,
+76,external,tools_only,False,True,What is the current temperature?,"The current temperature in Sydney, Australia is 22°C and it is partly cloudy. The wind is blowing at 15 km/h from the East.",1.468,
+76,external,rag_tools,True,True,What is the current temperature?,"The current temperature in Sydney, Australia is 22°C and it is partly cloudy. The wind is blowing at 15 km/h from the East.",2.5588,
+77,external,baseline,False,False,Is it currently raining?,"I cannot tell you if it is currently raining because I do not know your location.
+
+Please provide your city, state, or zip code, and I would be happy to check the current weather forecast for you!",5.383,
+77,external,rag_only,True,False,Is it currently raining?,"I do not have access to real-time weather information, so I cannot tell you if it is currently raining where you are. Please check a local weather website or app for the most accurate information.",1.2223,
+77,external,tools_only,False,True,Is it currently raining?,"No, it is currently partly cloudy. However, the forecast for tomorrow predicts rain.",3.8746,
+77,external,rag_tools,True,True,Is it currently raining?,"No, it is currently partly cloudy. However, the forecast for tomorrow predicts rain.",3.7613000000000003,
+78,external,baseline,False,False,What is the current humidity?,"I cannot provide the current humidity without knowing your location. Please tell me your city and state, or zip code, and I will do my best to find the current weather information for you!",5.2894,
+78,external,rag_only,True,False,What is the current humidity?,"I do not have access to real-time environmental data, so I cannot tell you the current humidity. Please check a local weather website or app for that information.",1.0789,
+78,external,tools_only,False,True,What is the current humidity?,The current humidity is 60%.,0.7719,
+78,external,rag_tools,True,True,What is the current humidity?,The current humidity is 60%.,2.0718,
+79,external,baseline,False,False,"Which direction is the wind coming from in Sydney, and how fast is it blowing?","I do not have access to real-time, live weather data for Sydney.
+
+For the most accurate and current wind direction and speed, please check a reliable source such as the **Bureau of Meteorology (BOM)** website or a local weather app. They provide up-to-the-minute forecasts for Sydney.",6.1093,
+79,external,rag_only,True,False,"Which direction is the wind coming from in Sydney, and how fast is it blowing?","I do not have access to real-time weather data, so I cannot tell you the current wind direction or speed in Sydney.
+
+For the most accurate and up-to-date information, please check a reliable local weather website or use a weather app.",2.7804,
+79,external,tools_only,False,True,"Which direction is the wind coming from in Sydney, and how fast is it blowing?",The wind in Sydney is coming from the **East** at **15 km/h**.,2.3139,
+79,external,rag_tools,True,True,"Which direction is the wind coming from in Sydney, and how fast is it blowing?",The wind in Sydney is coming from the **East** at **15 km/h**.,2.1837,
+80,external,baseline,False,False,How much rainfall is forecast for tomorrow?,"Please provide your location (city and state, or zip code) so I can give you an accurate rainfall forecast for tomorrow.",3.9807,
+80,external,rag_only,True,False,How much rainfall is forecast for tomorrow?,"I do not have access to real-time weather data, so I cannot provide you with a rainfall forecast for tomorrow. Please check a reliable weather website or app for that information.",1.12,
+80,external,tools_only,False,True,How much rainfall is forecast for tomorrow?,"The forecast for tomorrow is rain, with an expected rainfall of 5mm.",2.4673,
+80,external,rag_tools,True,True,How much rainfall is forecast for tomorrow?,Tomorrow's forecast predicts rain with an expected rainfall of 5mm.,2.3346999999999998,
+81,external,baseline,False,False,What is the current date and weather?,"I do not have real-time access to your current location or the live date.
+
+To get the current date and weather, please check a reliable source such as:
+
+*   A weather app on your phone.
+*   A search engine (e.g., searching ""weather in [Your City]"").
+
+This will provide you with the most accurate, up-to-date information.",7.0704,
+81,external,rag_only,True,False,What is the current date and weather?,I do not have access to real-time information such as the current date or local weather. Please check a reliable weather website or app for that information.,0.9892000000000001,
+81,external,tools_only,False,True,What is the current date and weather?,"The current date is **14 March 2026**, and the time in Sydney, Australia is **3:30 PM AEDT (UTC+11)**.
+
+The current weather is **22°C and partly cloudy**, with 60% humidity and winds from the East at 15 km/h. Tomorrow's forecast predicts rain with about 5mm expected.",7.0986,
+81,external,rag_tools,True,True,What is the current date and weather?,"The current date is **14 March 2026**, and the time is **3:30 PM AEDT** in Sydney, Australia.
+
+The current weather is **22°C and partly cloudy**. The humidity is 60%, and the wind is blowing at 15 km/h from the East. Tomorrow's forecast predicts **rain**, with about 5mm expected.",5.3124,
+82,external,baseline,False,False,"Given the current temperature of 22C, what would the temperature be after a 5C increase?",The temperature would be 27°C after a 5°C increase (22°C + 5°C).,3.391,
+82,external,rag_only,True,False,"Given the current temperature of 22C, what would the temperature be after a 5C increase?",The temperature would be $27^\circ\text{C}$ after a $5^\circ\text{C}$ increase.,1.8704,
+82,external,tools_only,False,True,"Given the current temperature of 22C, what would the temperature be after a 5C increase?",The temperature would be 27°C (22°C + 5°C).,1.6346,
+82,external,rag_tools,True,True,"Given the current temperature of 22C, what would the temperature be after a 5C increase?",The temperature would be 27°C after a 5°C increase from 22°C.,4.1269,
+83,external,baseline,False,False,"If Sydney's current temperature is 22C and another location is 18C, what is the temperature difference?",The temperature difference is 4°C (22°C - 18°C).,3.7039,
+83,external,rag_only,True,False,"If Sydney's current temperature is 22C and another location is 18C, what is the temperature difference?",The temperature difference is $22^\circ\text{C} - 18^\circ\text{C} = 4^\circ\text{C}$.,2.1637,
+83,external,tools_only,False,True,"If Sydney's current temperature is 22C and another location is 18C, what is the temperature difference?",The temperature difference is $22^\circ\text{C} - 18^\circ\text{C} = 4^\circ\text{C}$.,2.0468,
+83,external,rag_tools,True,True,"If Sydney's current temperature is 22C and another location is 18C, what is the temperature difference?",The temperature difference is $22^\circ\text{C} - 18^\circ\text{C} = 4^\circ\text{C}$.,2.0549,
+84,external,baseline,False,False,"What date is tomorrow, and is rain forecast for that day?","I do not have real-time access to the current date. Please tell me today's date, and I can then check the forecast for tomorrow's date for you.",7.2037,
+84,external,rag_only,True,False,"What date is tomorrow, and is rain forecast for that day?","I do not have access to real-time information, so I cannot tell you what date tomorrow is or provide a current weather forecast. Please check a reliable weather website or app for that information.",2.6184000000000003,
+84,external,tools_only,False,True,"What date is tomorrow, and is rain forecast for that day?","Tomorrow's date is March 15, 2026. Yes, rain is forecast for that day, with about 5mm expected.",7.6276,
+84,external,rag_tools,True,True,"What date is tomorrow, and is rain forecast for that day?","Tomorrow's date is March 15, 2026. Yes, rain is forecast for that day, with an expected amount of 5mm.",15.6135,
+85,external,baseline,False,False,"A meeting starts at 17:00, how long is it until the meeting?",Please tell me the current time so I can calculate how long it is until the meeting starts at 17:00.,4.4083,
+85,external,rag_only,True,False,"A meeting starts at 17:00, how long is it until the meeting?",I need to know the current time to tell you how long it is until the meeting.,1.9997,
+85,external,tools_only,False,True,"A meeting starts at 17:00, how long is it until the meeting?",It is 1 hour and 30 minutes until your meeting.,5.1054,
+85,external,rag_tools,True,True,"A meeting starts at 17:00, how long is it until the meeting?",It is 1 hour and 30 minutes until your meeting.,5.1086,
+86,misleading,baseline,False,False,"The DW-4 has a maximum operating depth of 1,500 metres, correct?","I need more context to confirm that. ""DW-4"" could refer to several different models or pieces of equipment.
+
+Could you please specify what the DW-4 is (e.g., a submersible, a specific ROV model, etc.) or provide the manufacturer's name? This will allow me to give you an accurate depth rating.",7.0984,
+86,misleading,rag_only,True,False,"The DW-4 has a maximum operating depth of 1,500 metres, correct?","Based on the documentation, the maximum operating depth for the DW-4 is **1,200 metres**, not 1,500 metres.",5.4876000000000005,
+86,misleading,tools_only,False,True,"The DW-4 has a maximum operating depth of 1,500 metres, correct?","I do not have specific technical data on a model labeled ""DW-4."" To confirm its maximum operating depth, please provide more context, such as what type of equipment or vehicle it is, or if you have a manual or source I can reference.",7.8974,
+86,misleading,rag_tools,True,True,"The DW-4 has a maximum operating depth of 1,500 metres, correct?","No, according to the documentation, the maximum operating depth for the DW-4 is **1,200 metres**, not 1,500 metres.",6.2207,
+87,misleading,baseline,False,False,"Since the GMS-2 is calibrated every 250 operating hours, how many calibrations are required after 500 operating hours?","Two calibrations are required after 500 operating hours.
+
+Calculation: 500 operating hours / 250 operating hours per calibration = 2 calibrations.",4.134,
+87,misleading,rag_only,True,False,"Since the GMS-2 is calibrated every 250 operating hours, how many calibrations are required after 500 operating hours?","Two calibrations are required after 500 operating hours.
+
+Calculation: 500 operating hours / 250 operating hours per calibration = 2 calibrations.",5.4637,
+87,misleading,tools_only,False,True,"Since the GMS-2 is calibrated every 250 operating hours, how many calibrations are required after 500 operating hours?","You will require **2** calibrations.
+
+Calculation: 500 operating hours / 250 operating hours per calibration = 2 calibrations.",5.3009,
+87,misleading,rag_tools,True,True,"Since the GMS-2 is calibrated every 250 operating hours, how many calibrations are required after 500 operating hours?",Two calibrations are required after 500 operating hours (500 hours / 250 hours per calibration = 2 calibrations).,5.7444,
+88,misleading,baseline,False,False,The DW-4 has a nominal extraction rate of 18 tonnes per hour. How much does it extract in eight hours?,"The DW-4 extracts 144 tonnes in eight hours.
+
+(Calculation: 18 tonnes/hour $\times$ 8 hours = 144 tonnes)",3.6497,
+88,misleading,rag_only,True,False,The DW-4 has a nominal extraction rate of 18 tonnes per hour. How much does it extract in eight hours?,"The DW-4 extracts 144 tonnes in eight hours.
+
+(18 tonnes/hour $\times$ 8 hours = 144 tonnes)",3.1434,
+88,misleading,tools_only,False,True,The DW-4 has a nominal extraction rate of 18 tonnes per hour. How much does it extract in eight hours?,The DW-4 will extract $144$ tonnes in eight hours ($18 \text{ tonnes/hour} \times 8 \text{ hours}$).,2.9290000000000003,
+88,misleading,rag_tools,True,True,The DW-4 has a nominal extraction rate of 18 tonnes per hour. How much does it extract in eight hours?,The DW-4 will extract 144 tonnes in eight hours (18 tonnes/hour * 8 hours).,2.7984,
+89,misleading,baseline,False,False,"Because the GMS-2 stores 16 GB of data, does that mean it can store exactly 16 GB of CSV exports without any overhead?","No, it is highly unlikely it can store *exactly* 16 GB.
+
+All digital storage systems have overhead. This includes space reserved for the file system structure, metadata, and formatting, which reduces the total usable capacity.
+
+Therefore, the actual usable space will be slightly less than the advertised 16 GB, meaning you cannot fill it precisely to the limit.",7.3695,
+89,misleading,rag_only,True,False,"Because the GMS-2 stores 16 GB of data, does that mean it can store exactly 16 GB of CSV exports without any overhead?","No, it is highly unlikely that it can store *exactly* 16 GB.
+
+Digital storage always involves overhead. This overhead accounts for the file system's metadata, formatting, and the structure required to manage the data on the drive.
+
+Therefore, the usable space for your CSV exports will almost certainly be slightly less than the advertised 16 GB capacity.",9.2086,
+89,misleading,tools_only,False,True,"Because the GMS-2 stores 16 GB of data, does that mean it can store exactly 16 GB of CSV exports without any overhead?","No, it is highly unlikely that it can store *exactly* 16 GB.
+
+Digital storage always involves overhead. The file system itself requires space for metadata, directory structures, and allocation tables, which reduces the usable capacity.
+
+Therefore, while the total capacity is 16 GB, the actual usable space for your CSV exports will be slightly less than 16 GB due to this necessary overhead.",11.7104,
+89,misleading,rag_tools,True,True,"Because the GMS-2 stores 16 GB of data, does that mean it can store exactly 16 GB of CSV exports without any overhead?","No, it is highly unlikely that the GMS-2 can store *exactly* 16 GB of CSV exports.
+
+In digital storage, overhead is almost always present. This overhead accounts for:
+
+1.  **File System Metadata:** The operating system needs space to track where files are located.
+2.  **Encoding/Formatting:** The CSV structure itself adds minor overhead.
+3.  **Padding/Allocation:** Storage is allocated in blocks, not perfectly to the byte.
+
+Therefore, the usable space will typically be slightly less than the advertised total capacity.",12.0865,
+90,misleading,baseline,False,False,"CRG allows any employee to operate the DW-4 as long as they have completed general site induction, correct?","I cannot confirm this without knowing what ""CRG"" and ""DW-4"" refer to, as policies vary by site and organization.
+
+For accurate information regarding operational requirements, you must consult the official CRG documentation, the site safety manual, or speak directly with your site supervisor or safety officer. They hold the definitive guidelines.",6.5565,
+90,misleading,rag_only,True,False,"CRG allows any employee to operate the DW-4 as long as they have completed general site induction, correct?","No, that is incorrect. While employees must complete general site induction before entering an active facility, the documentation specifies that personnel operating specialised equipment like the DW-4 must *also* complete **equipment-specific training** and receive **authorization** for that specific device.",8.2774,
+90,misleading,tools_only,False,True,"CRG allows any employee to operate the DW-4 as long as they have completed general site induction, correct?","I do not have access to CRG's specific operational policies or safety guidelines regarding the DW-4.
+
+For accurate confirmation on who is authorized to operate the DW-4, please consult your company's official safety manual, training department, or a direct supervisor at CRG. They will have the most up-to-date and correct information.",8.2057,
+90,misleading,rag_tools,True,True,"CRG allows any employee to operate the DW-4 as long as they have completed general site induction, correct?","No, general site induction is not sufficient. The documentation states that personnel operating specialized extraction equipment, like the DW-4, must complete **equipment-specific training** and receive **authorization** for that specific device, in addition to site induction.",9.836,
+91,misleading,baseline,False,False,"The DW-4 must be inspected every 90 days, while the GMS-2 is inspected every 250 operating hours. Is that correct?",I cannot confirm the accuracy of those inspection schedules. Maintenance intervals for specific equipment like the DW-4 and GMS-2 must be verified using the manufacturer's official service manual or the relevant operational guidelines. Please consult that documentation for the correct and up-to-date requirements.,6.4884,
+91,misleading,rag_only,True,False,"The DW-4 must be inspected every 90 days, while the GMS-2 is inspected every 250 operating hours. Is that correct?","Based on the documentation:
+
+*   The **DW-4** must undergo a scheduled inspection after every **250 operating hours**.
+*   The **GMS-2** must be calibrated every **90 days**.
+
+Therefore, your statement is incorrect regarding the inspection intervals.",11.0106,
+91,misleading,tools_only,False,True,"The DW-4 must be inspected every 90 days, while the GMS-2 is inspected every 250 operating hours. Is that correct?","I do not have access to the specific operational manuals or maintenance records for the DW-4 or GMS-2 equipment. Therefore, I cannot confirm if those inspection intervals (90 days and 250 operating hours, respectively) are correct.
+
+Please consult the official manufacturer's manual or your facility's maintenance department for accurate and up-to-date inspection schedules.",7.6758,
+91,misleading,rag_tools,True,True,"The DW-4 must be inspected every 90 days, while the GMS-2 is inspected every 250 operating hours. Is that correct?","No, that is incorrect. According to the documentation:
+
+*   The **DW-4** must be inspected every **250 operating hours**.
+*   The **GMS-2** must be calibrated every **90 days**.",16.0314,
+92,misleading,baseline,False,False,"The document states that CRG's annual mineral production is 10,000 tonnes. How does that compare with the DW-4's production?","I cannot compare the two figures because the document provided only states that CRG's annual mineral production is 10,000 tonnes. The production amount for the DW-4 is not mentioned in the text.",8.8555,
+92,misleading,rag_only,True,False,"The document states that CRG's annual mineral production is 10,000 tonnes. How does that compare with the DW-4's production?","The provided documentation does not state the annual production figure for the DW-4 to allow for a direct comparison with CRG's 10,000 tonnes.
+
+The documentation specifies the DW-4's **nominal extraction rate** is 18kg per hour. Furthermore, production reporting is done **daily** based on operating hours, rather than providing a consolidated annual total.",14.5572,
+92,misleading,tools_only,False,True,"The document states that CRG's annual mineral production is 10,000 tonnes. How does that compare with the DW-4's production?","Please provide the document or the specific data regarding the DW-4's production so I can compare it with CRG's 10,000 tonnes.",5.9350000000000005,
+92,misleading,rag_tools,True,True,"The document states that CRG's annual mineral production is 10,000 tonnes. How does that compare with the DW-4's production?","The provided documentation does not state a total annual production figure for the DW-4 to compare directly with CRG's 10,000 tonnes.
+
+Instead, the document specifies the DW-4's **nominal extraction rate** as **18kg per hour**. This rate is a reference operating value and may vary based on geological conditions.",11.3576,
+93,misleading,baseline,False,False,"Since the GMS-2 measures pressure and temperature, it cannot measure vibration, can it?","Based on its stated function of measuring pressure and temperature, the GMS-2 is not designed to measure vibration.
+
+Vibration measurement typically requires a different type of sensor, such as an accelerometer or a piezoelectric transducer. While some advanced multi-parameter sensors can measure multiple physical quantities, you would need to confirm the GMS-2's specific model capabilities to be certain.",7.5631,
+93,misleading,rag_only,True,False,"Since the GMS-2 measures pressure and temperature, it cannot measure vibration, can it?","Whether the GMS-2 can measure vibration depends entirely on its design and the sensors it incorporates.
+
+Generally, measuring different physical phenomena requires different types of sensors. If the GMS-2 is *only* equipped with pressure and temperature sensors, it cannot measure vibration. However, some multi-parameter instruments can be upgraded or designed with accelerometers or vibration sensors to measure that data as well.
+
+You would need the specific technical specifications for the GMS-2 to confirm its capabilities.",10.0118,
+93,misleading,tools_only,False,True,"Since the GMS-2 measures pressure and temperature, it cannot measure vibration, can it?","I do not have specific technical documentation for a device named ""GMS-2.""
+
+While measuring pressure and temperature does not inherently mean it *cannot* measure vibration, the capability depends entirely on the sensor's design and installed components.
+
+To confirm if it measures vibration, you would need to consult the official technical specifications, datasheet, or user manual for the GMS-2 model.",9.4988,
+93,misleading,rag_tools,True,True,"Since the GMS-2 measures pressure and temperature, it cannot measure vibration, can it?","I do not have specific documentation regarding the GMS-2's full capabilities. While it measures pressure and temperature, whether it can measure vibration depends entirely on its design and installed sensors. You would need to consult the GMS-2's technical manual or manufacturer specifications for a definitive answer.",8.9193,
+94,misleading,baseline,False,False,"If a DW-4 fault is repaired, can the operator restart it immediately without supervisor approval?","I cannot provide a definitive answer as operational procedures for specific equipment like a ""DW-4"" are governed by site-specific safety protocols and manuals.
+
+**You must consult the official Standard Operating Procedures (SOPs) or the equipment manual.**
+
+Generally, restarting critical machinery after a fault requires adherence to established Lockout/Tagout (LOTO) and restart checklists. **Always confirm the required authorization level with your direct supervisor or the designated safety officer.**",6.6825,
+94,misleading,rag_only,True,False,"If a DW-4 fault is repaired, can the operator restart it immediately without supervisor approval?","I do not have access to the specific operational procedures or safety protocols for a ""DW-4 fault.""
+
+Restarting any equipment after a fault repair is a critical safety procedure. **You must consult the official Standard Operating Procedures (SOPs) or consult your direct supervisor** to determine if immediate restart is authorized, as safety protocols usually require specific sign-offs regardless of the repair status.",9.301,
+94,misleading,tools_only,False,True,"If a DW-4 fault is repaired, can the operator restart it immediately without supervisor approval?","I do not have access to specific operational manuals or safety protocols for equipment labeled ""DW-4.""
+
+Restarting any industrial equipment after a fault repair must strictly follow the facility's Standard Operating Procedures (SOPs). **You must consult the official equipment manual, the site's safety guidelines, or your direct supervisor** to determine if supervisor approval is required for restarting after a DW-4 fault.",8.5988,
+94,misleading,rag_tools,True,True,"If a DW-4 fault is repaired, can the operator restart it immediately without supervisor approval?","No, the operator cannot restart the DW-4 immediately. The documentation states that the equipment ""must not be restarted until the fault has been investigated and an authorised supervisor has approved the restart.""",6.3048,
+95,misleading,baseline,False,False,The CRG document specifies that its operational database uses PostgreSQL and retains records for seven years. What are the advantages of this setup?,"This setup offers strong data integrity and compliance.
+
+**PostgreSQL** provides a robust, reliable, and ACID-compliant open-source database, ensuring data accuracy and stability.
+
+**Seven-year retention** addresses critical regulatory and legal compliance requirements (e.g., financial or healthcare records).
+
+Together, they ensure that the CRG system maintains high data quality while meeting necessary long-term audit and governance standards.",5.46,
+95,misleading,rag_only,True,False,The CRG document specifies that its operational database uses PostgreSQL and retains records for seven years. What are the advantages of this setup?,"The provided CRG documentation mentions that an operational database is used for storing records, but it does not specify the name of the database software, the server location, or the company's data retention period. Therefore, the document does not detail the advantages of using PostgreSQL or retaining records for seven years.",6.6765,
+95,misleading,tools_only,False,True,The CRG document specifies that its operational database uses PostgreSQL and retains records for seven years. What are the advantages of this setup?,"This setup offers several advantages:
+
+1.  **Data Integrity & Reliability (PostgreSQL):** PostgreSQL is robust, ACID-compliant, and highly reliable, ensuring data accuracy for critical operations.
+2.  **Cost-Effectiveness & Flexibility:** As open-source software, it avoids vendor lock-in and offers extensive customization.
+3.  **Compliance & Auditability (7 Years):** The seven-year retention period ensures the organization meets necessary regulatory, legal, or compliance requirements, providing a complete historical audit trail.",10.9895,
+95,misleading,rag_tools,True,True,The CRG document specifies that its operational database uses PostgreSQL and retains records for seven years. What are the advantages of this setup?,"The provided CRG documentation does not specify that the operational database uses PostgreSQL or that records are retained for seven years. Therefore, I cannot detail the advantages of that specific setup based on the available text.",7.4729,
+96,misleading,baseline,False,False,"Since humans only use 10% of their brains, what happens if we learn to use the remaining 90%?","The idea that humans only use 10% of their brain is a persistent myth. Brain scans show that we use virtually all of our brain, even during rest.
+
+If you ""learn to use"" more of your brain, what actually happens is that you improve your cognitive abilities. This means enhancing skills like memory, focus, problem-solving, and emotional regulation through learning, practice, and lifestyle changes, rather than unlocking dormant, unused capacity.",8.0326,
+96,misleading,rag_only,True,False,"Since humans only use 10% of their brains, what happens if we learn to use the remaining 90%?","The idea that humans only use 10% of their brains is a persistent myth. Modern neuroscience and brain imaging studies show that we use virtually all parts of our brain over time.
+
+There is no scientific evidence to suggest a dormant 90% waiting to be unlocked. Brain function is complex, and ""using"" more of it would likely involve learning new skills, improving connections, and optimizing existing cognitive functions, rather than gaining sudden, superhuman abilities.",8.856,
+96,misleading,tools_only,False,True,"Since humans only use 10% of their brains, what happens if we learn to use the remaining 90%?","The idea that humans only use 10% of their brains is a persistent myth and is scientifically inaccurate. Brain imaging studies show that we use virtually all parts of our brain over time, depending on the task.
+
+If we *could* magically unlock more potential, it would likely involve advanced learning, improved cognitive function, and better understanding of complex systems, rather than a sudden surge of untapped power. Our brain is incredibly complex, and ""using more"" usually means learning more, not unlocking dormant hardware.",10.8554,
+96,misleading,rag_tools,True,True,"Since humans only use 10% of their brains, what happens if we learn to use the remaining 90%?","The idea that humans only use 10% of their brains is a persistent myth. Modern neuroscience shows that we use virtually all parts of our brain over time, and brain scans reveal activity across all regions.
+
+If you learn new skills or challenge your mind, you are strengthening existing neural pathways, not unlocking dormant ones. Learning keeps the brain healthy and improves cognitive function, but there is no untapped 90% waiting to be discovered.",9.0223,
+97,misleading,baseline,False,False,"Given that the Great Wall of China is clearly visible from the Moon with the naked eye, why is it easier to see than other human-made structures?","The premise that the Great Wall is visible from the Moon with the naked eye is a persistent myth. In reality, no human-made structure is visible from the Moon.
+
+From Earth orbit, the Wall is too narrow and lacks sufficient contrast with its surroundings to be easily seen without specialized equipment. Visibility from space depends on size, contrast, and atmospheric conditions, making the Wall indistinguishable to the naked eye from such vast distances.",7.6433,
+97,misleading,rag_only,True,False,"Given that the Great Wall of China is clearly visible from the Moon with the naked eye, why is it easier to see than other human-made structures?","The premise that the Great Wall of China is visible from the Moon with the naked eye is a persistent myth. Astronauts and scientific evidence confirm this is impossible.
+
+From the Moon, the Earth appears as a small, blue marble. To be visible, an object must be immensely large or have extreme contrast against its background. The Great Wall is too narrow and lacks sufficient contrast to be seen from that distance, making it indistinguishable from other human structures.",9.3875,
+97,misleading,tools_only,False,True,"Given that the Great Wall of China is clearly visible from the Moon with the naked eye, why is it easier to see than other human-made structures?","The premise that the Great Wall of China is visible from the Moon with the naked eye is a persistent myth.
+
+In reality, no human-made structure, including the Great Wall, is visible from the Moon with the unaided human eye. From that immense distance, the wall's width and color contrast are too small to be resolved by human vision. Astronauts have confirmed that such visibility is impossible.",10.6847,
+97,misleading,rag_tools,True,True,"Given that the Great Wall of China is clearly visible from the Moon with the naked eye, why is it easier to see than other human-made structures?","The premise that the Great Wall of China is visible from the Moon with the naked eye is a persistent myth. In reality, no human-made structure is visible from the Moon without optical aid.
+
+From that distance, objects must be enormous and have extreme contrast to be seen. The Great Wall is too narrow and blends too closely with its surroundings to be resolved by the human eye from lunar distances. Visibility depends on size, contrast, and atmospheric conditions, not just the structure's existence.",11.0393,
+98,misleading,baseline,False,False,"Since gold is magnetic at room temperature, why are gold jewellery clasps attracted to magnets?","Gold is actually diamagnetic, meaning it is very weakly repelled by magnets, not attracted.
+
+If your gold clasp is attracted to a magnet, the magnetism is coming from another material. This is usually due to:
+
+1.  **Components:** The clasp might contain non-gold parts, such as steel, nickel, or other alloys.
+2.  **Plating:** The clasp could be plated with a magnetic material.
+
+The attraction is to these foreign components, not the gold itself.",7.2522,
+98,misleading,rag_only,True,False,"Since gold is magnetic at room temperature, why are gold jewellery clasps attracted to magnets?","Gold itself is not strongly magnetic; it is actually diamagnetic.
+
+If your gold clasps are attracted to magnets, the attraction is almost certainly due to **other metals** used in the clasp's construction. Jewelry clasps are often alloys and may contain components like nickel, iron, or steel, which are ferromagnetic and will be attracted to a magnet. The magnet is pulling on these underlying materials, not the gold itself.",10.4611,
+98,misleading,tools_only,False,True,"Since gold is magnetic at room temperature, why are gold jewellery clasps attracted to magnets?","Gold itself is generally not considered strongly magnetic at room temperature.
+
+If a gold clasp is attracted to a magnet, the attraction is almost certainly due to a **different material** within the clasp. This could be:
+
+1.  **Plating:** The clasp might be plated with a magnetic metal like nickel or steel.
+2.  **Internal Components:** The hinge, spring, or pin holding the clasp together could be made of a magnetic alloy.
+
+The magnet is interacting with the magnetic component, not the gold itself.",12.6747,
+98,misleading,rag_tools,True,True,"Since gold is magnetic at room temperature, why are gold jewellery clasps attracted to magnets?","Gold is generally not considered magnetic at room temperature; it is diamagnetic.
+
+If a gold clasp is attracted to a magnet, the attraction is almost certainly due to a different material used in the clasp's construction, such as a metal alloy, clasp mechanism, or internal component that *is* ferromagnetic (like nickel or steel). The magnet is interacting with that specific material, not the gold itself.",10.4352,
+99,misleading,baseline,False,False,"Because seasons occur when Earth moves much closer to or farther from the Sun, why is summer hotter than winter?","Seasons are not primarily caused by Earth's distance from the Sun. The main cause is the Earth's **axial tilt** ($\approx 23.5^\circ$) as it orbits.
+
+During summer, a hemisphere is tilted *toward* the Sun, receiving more direct, concentrated sunlight and longer daylight hours. In winter, that same hemisphere is tilted *away*, receiving less direct energy, resulting in cooler temperatures.",7.2957,
+99,misleading,rag_only,True,False,"Because seasons occur when Earth moves much closer to or farther from the Sun, why is summer hotter than winter?","The primary cause of seasons is the **tilt of the Earth's axis** ($\approx 23.5^\circ$), not the changing distance from the Sun.
+
+During summer, a hemisphere is tilted *toward* the Sun. This results in the region receiving more direct, concentrated sunlight for longer periods. In contrast, during winter, that hemisphere is tilted *away*, receiving less direct energy and experiencing shorter daylight hours, leading to cooler temperatures.",10.9193,
+99,misleading,tools_only,False,True,"Because seasons occur when Earth moves much closer to or farther from the Sun, why is summer hotter than winter?","Seasons are primarily caused by the **tilt** of the Earth's axis ($\approx 23.5^\circ$), not the changing distance from the Sun.
+
+When a hemisphere is tilted *toward* the Sun (summer), it receives more direct, concentrated sunlight for longer periods. In winter, the tilt directs the sunlight at a more oblique angle, spreading the energy out and resulting in less intense heating.",12.4024,
+99,misleading,rag_tools,True,True,"Because seasons occur when Earth moves much closer to or farther from the Sun, why is summer hotter than winter?","The primary reason for seasons is not the Earth's changing distance from the Sun, but the **tilt of the Earth's axis** (about 23.5 degrees).
+
+This tilt means that as the Earth orbits, different hemispheres are tilted *toward* the Sun at different times.
+
+During summer, a hemisphere is tilted toward the Sun, receiving more direct, concentrated sunlight over a longer period, leading to greater solar energy and higher temperatures. In winter, that hemisphere is tilted away, receiving less direct and more spread-out sunlight.",12.0188,
+100,misleading,baseline,False,False,"Since all bacteria cause disease, why do doctors recommend probiotics containing live bacteria?","Not all bacteria cause disease; many are beneficial. Doctors recommend probiotics because they contain live, beneficial bacteria that help balance the gut microbiome.
+
+These good bacteria help support digestion, aid nutrient absorption, and strengthen the immune system by competing with harmful pathogens. They aim to restore balance to the gut flora, rather than fighting off disease directly.",6.9755,
+100,misleading,rag_only,True,False,"Since all bacteria cause disease, why do doctors recommend probiotics containing live bacteria?","Not all bacteria cause disease. The human body hosts trillions of bacteria in the gut, many of which are beneficial (the microbiome).
+
+Probiotics introduce specific, live, beneficial bacteria strains to help restore or maintain a healthy balance in the gut flora. They help support digestion, immune function, and can crowd out harmful pathogens, rather than treating the body as if all bacteria were threats.",8.5127,
+100,misleading,tools_only,False,True,"Since all bacteria cause disease, why do doctors recommend probiotics containing live bacteria?","Not all bacteria cause disease; many are essential for life. Doctors recommend probiotics because they introduce specific, beneficial live bacteria strains to help **balance** your gut microbiome.
+
+Instead of fighting pathogens directly, they aim to support the natural balance of gut flora. This healthy balance can aid digestion, support nutrient absorption, and help maintain a stronger immune system.",9.6589,
+100,misleading,rag_tools,True,True,"Since all bacteria cause disease, why do doctors recommend probiotics containing live bacteria?","The premise that all bacteria cause disease is incorrect; most bacteria are harmless or beneficial.
+
+Doctors recommend probiotics because they introduce *beneficial* live bacteria to help balance your gut microbiome. Instead of fighting off all bacteria, probiotics aim to support the good bacteria that aid digestion, nutrient absorption, and immune function. They help maintain a healthy balance, which can help keep harmful pathogens from overgrowing.",9.6399,

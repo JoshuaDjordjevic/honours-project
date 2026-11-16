@@ -2,3 +2,4 @@
 chroma_db/*
 !chroma_db/here.txt
 *.pyc
+*.twbr

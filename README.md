@@ -38,3 +38,91 @@ Each configuration is evaluated using consistent prompts, datasets, and inferenc
 ## Research Goal
 
 Determine whether RAG and callable tools can improve the factual reliability of small-scale open-source LLMs while maintaining practical performance and accessibility on consumer-grade hardware.
+
+# Installation and Running Experiments
+
+## Prerequisites
+- Python 3.10.8
+- Ollama - required for local LLM inference
+- Gemma 4 E4B - The model used for the experiments, downloaded via Ollama
+- Git - To clone this repository
+
+## Setup Instructions
+
+1. Install Ollama<br>Download and install Ollama from https://ollama.com
+2. Download the required LLM<br>Open a terminal window and pull the required model
+   ```bash
+   ollama pull gemma4:e4b
+   ```
+   Ensure Ollama is running before attempting to execute the project
+3. Clone the repository
+    ```bash
+    git clone https://github.com/JoshuaDjordjevic/honours-project/
+    cd honours-project
+    ```
+4. Create a python virtual environment
+    ```bash
+    python -m venv venv
+    ```
+5. Activate the virtual environment<br>Windows:
+   ```bash
+   venv\Scripts\activate
+   ```
+   Linux / macOS
+   ```bash
+   source venv/bin/activate
+   ```
+6. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Notes
+- Python 3.10.8 is the version used during development and experimentation.
+- Ollama manages the local model installation and inference.
+- The `gemma4:e4b` model must be available locally before running the experiments. The version used in the experiments was the latest release as of 31/10/2026.
+- A virtual environment is recommend to isolate project dependencies.
+
+## Running the Experiment
+
+### Step 1. Prepare the Results Directory
+
+Before starting a new experiment, delete any existing output files in the `results/` directory to prevent previous results from being mixed with new experimental data.
+
+The following files should be removed:
+
+- `results/grading.csv`
+- `results/grading.jsonl`
+- `results/results.csv`
+- `results/results.jsonl`
+
+`results/Results Excel Doc.xlsx` may be kept. This file is an example file containing key data from the thesis experimentation run.
+
+### Step 2. Generate LLM Responses
+
+Run `generate_responses.py` to generate responses from the configured LLM.
+
+The script uses the benchmark questions provided in `benchmark_questions/questions.xlsx` as input and writes the generated responses to `results/results.jsonl`.
+
+If the output file already exists, new results will be appended rather than overwriting existing entries.
+
+### Step 3. Grade the Generated Responses
+
+Once response generation is complete, run `generate_grading.py` to evaluate the generated responses. Grading is based off question specifications provided in `benchmark_questions/questions.xlsx`.
+
+The grading results are saved to `results/grading.jsonl`.
+
+### Step 4. Convert JSONL Files to CSV (Optional)
+
+For easier analysis and visualisation, the JSONL output files can be converted into CSV format.
+
+Run the following scripts:
+
+- `convert_grading.py` - Converts `grading.jsonl` into `grading.csv`.
+- `convert_results.py` - Converts `results.jsonl` into `results.csv`.
+
+The resulting CSV files can be opened in Microsoft Excel, Tableau, or other data analysis and visualisation software.
+
+# Research Results
+
+For results of this research please see the thesis.
